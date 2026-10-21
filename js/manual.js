@@ -203,7 +203,7 @@
       var fr = src.closest(".clipe-frame"), fig = src.closest(".clipe");
       if (!fr) return;
       var id = fig.dataset.clipe || "";
-      fr.innerHTML = '<div class="slot" role="img"><em>Arquivo não encontrado · ' + id + '</em><span class="play" aria-hidden="true"></span><strong>Vídeo indisponível neste computador</strong><span>Copie os MP4 para a pasta <code>videos/</code>, ao lado de <code>index.html</code>.</span></div>';
+      fr.innerHTML = '<div class="slot" role="img"><em>Não foi possível carregar · ' + id + '</em><span class="play" aria-hidden="true"></span><strong>Vídeo indisponível neste computador</strong><span>Confira se o MP4 está na pasta <code>videos/</code>, ao lado de <code>index.html</code>, e se o navegador reproduz vídeo MP4 (H.264).</span></div>';
     });
   });
 
