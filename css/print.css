@@ -28,3 +28,7 @@
   .tabela th { background: #e8eef2 !important; color: #000; }
   .tabela-wrap { overflow: visible; }
 }
+@media print {
+  /* no papel o número do passo aparece sempre, mesmo se já marcado como feito */
+  .passo.feito::before { content: attr(data-n); background: var(--cbg); color: var(--c); }
+}
