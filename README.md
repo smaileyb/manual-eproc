@@ -42,3 +42,7 @@ Conventional Commits, em português: `feat`, `fix`, `content`, `style`, `docs`, 
 ## Impressão e PDF
 
 O botão **Imprimir** (ou Ctrl+P) abre todas as seções e troca os vídeos pela legenda. Escolha “Salvar como PDF”.
+
+## Repositório git
+
+O histórico de commits vem no arquivo `..\manual.bundle` (pasta acima desta). Para ativar o repositório nesta pasta, dê dois cliques em `ativar-git.bat` (precisa do Git instalado). Depois disso, `git log` mostra todos os commits e `git status` deve vir limpo.
