@@ -1,0 +1,30 @@
+/* Impressão e PDF: tudo aberto, uma coluna, sem navegação. */
+@page { size: A4; margin: 16mm 14mm; }
+@media print {
+  html { scroll-behavior: auto; }
+  body { background: #fff; font-size: 10.5pt; line-height: 1.5; color: #000; }
+  .topbar, .side, .stepper-bar, .skip, .passo-foot, .search, .filtro, .hero .cta, .escolha .ou { display: none !important; }
+  .shell { display: block; max-width: none; }
+  main { padding: 0; }
+  .wrap { max-width: none; }
+  .etapa { page-break-before: always; margin-bottom: 0; }
+  #comece-aqui, #etapa-1 { page-break-before: auto; }
+  .sec-title { page-break-before: auto; margin-top: 24pt; }
+  .hero { background: #fff !important; color: #000; border: 2px solid var(--eproc-petrol); box-shadow: none; }
+  .hero h1, .hero p { color: #000; }
+  .hero::after { display: none; }
+  .etapa-head, .passo, .card, .fluxo a, .tabela, details.sanfona, .opcao { box-shadow: none !important; border: 1px solid #999; }
+  .etapa-head { border-top: 6px solid var(--c); }
+  .passo, .callout, figure, .tabela tr, .card { break-inside: avoid; }
+  body.foco .passo { opacity: 1; }
+  .fluxo li:not(:last-child) a::after { display: none; }
+  /* vídeos: no papel, só a legenda */
+  .clipe-frame { display: none; }
+  .clipe { border: 1px dashed #666; border-radius: 8px; padding: 6px 10px; margin: 10px 0; }
+  .clipe .clipe-cap { margin: 0; }
+  .clipe .clipe-cap::before { content: "▶ Vídeo no manual online:"; font-weight: 700; }
+  details.sanfona > summary::after { content: ""; }
+  a { color: inherit; text-decoration: none; }
+  .tabela th { background: #e8eef2 !important; color: #000; }
+  .tabela-wrap { overflow: visible; }
+}
