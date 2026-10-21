@@ -409,7 +409,62 @@
   <div class="callout regra"><span class="ico" aria-hidden="true">§</span><div><span class="tit">Regra do gabinete</span><p>Nos despachos e decisões, o localizador da Secretaria vem na preferência e entra depois da assinatura. Nos votos, a troca é programada na inclusão em pauta e só se efetiva quando a sessão fecha e as intimações são disparadas.</p></div></div>
   <p class="rev">Tabela conforme o documento do gabinete. Seção revisada em 21/10/2026.</p>
 </section>
-<!--@consulta2-->
+<section class="sec-title" id="referencia" data-spy data-busca-sec="Referência rápida">
+  <p class="kicker">Consulta rápida</p>
+  <h2>Referência rápida</h2>
+  <p>Para quem só quer confirmar um detalhe.</p>
+
+  <details class="sanfona" open><summary>Qual tipo de minuta vai para onde?</summary><div class="corpo"><div class="tabela-wrap"><table class="tabela">
+    <thead><tr><th scope="col">Tipo</th><th scope="col">Tratamento</th><th scope="col">Encaminhar para</th><th scope="col">Status na capa</th></tr></thead>
+    <tbody>
+      <tr data-busca="1"><td>A · Despacho, decisão, sentença, decisão monocrática</td><td><span class="ui">Juíza de Direito</span></td><td><span class="ui">Encaminhar minuta para assinatura</span></td><td>Para assinar</td></tr>
+      <tr data-busca="1"><td>B · Relatório/voto (e acórdão)</td><td><span class="ui">Juíza Relatora</span></td><td><span class="ui">Encaminhar minuta para conferência</span></td><td>Para conferir</td></tr>
+    </tbody></table></div>
+    <p class="mini" style="margin-top:10px">Nos dois tipos: <span class="ui">Texto Padrão</span> marcado e <span class="ui">Status destino</span> = <span class="ui">Rascunho</span>.</p></div></details>
+
+  <details class="sanfona"><summary>Localizadores do gabinete</summary><div class="corpo"><div class="tabela-wrap"><table class="tabela">
+    <thead><tr><th scope="col">Localizador</th><th scope="col">Para que serve</th></tr></thead>
+    <tbody>
+      <tr data-busca="1"><td>1ª Relatoria – Concluso – Despacho/Decisão</td><td>Entrada: onde os processos chegam. Sai daqui quando você assume o processo (Etapa 1).</td></tr>
+      <tr data-busca="1"><td>1TRVB – [nome]</td><td>Localizador individual de quem assumiu o processo.</td></tr>
+      <tr data-busca="1"><td>1TRVB – Pautado dd/mm</td><td>Localizador interno da pauta (ex.: 1TRVB – Pautado 09/11). É nele que se busca os processos para lançar o evento 12311 (Etapa 4).</td></tr>
+      <tr data-busca="1"><td>SEC – Incluído em Pauta</td><td>Acompanhamento da Secretaria; entra junto com o localizador da pauta (Etapa 3).</td></tr>
+    </tbody></table></div>
+    <p class="mini" style="margin-top:10px">Os demais localizadores da Secretaria estão na <a href="#secretaria">tabela própria</a>.</p></div></details>
+
+  <details class="sanfona"><summary>“Status desejado ao salvar” (barra do editor)</summary><div class="corpo">
+    <ul>
+      <li><span class="ui">Manter a minuta no status atual</span></li>
+      <li><span class="ui">Encaminhar minuta para conferência</span> (voto, B)</li>
+      <li><span class="ui">Definir minuta como conferida</span></li>
+      <li><span class="ui">Encaminhar minuta para assinatura</span> (despacho/decisão, A)</li>
+      <li><span class="ui">Retornar minuta para rascunho</span></li>
+    </ul>
+    <p class="mini">Cores dos status (curso): vermelho, <strong>Para conferir</strong>; verde, <strong>Conferida</strong>; azul, <strong>Para assinar</strong>. <span class="badge compl">Do manual do curso</span></p></div></details>
+
+  <details class="sanfona"><summary>Ícones que você vai usar</summary><div class="corpo">
+    <div class="icones">
+      <div class="shot"><img src="assets/img/barra-conferir.png" alt="Barra de ferramentas com o ✓ verde" style="max-height:60px;width:auto"><span>✓ verde: conferir</span></div>
+      <div class="shot"><img src="assets/img/icone-martelo.png" alt="Martelo" width="35" height="42"><span>Martelo: pauta</span></div>
+      <div class="shot"><img src="assets/img/icone-pauta.png" alt="Três pessoas em fundo preto" width="21" height="22"><span>Três pessoas: pauta</span></div>
+      <div class="shot"><img src="assets/img/botao-movimentar.png" alt="Botão Movimentar" width="120" height="36"><span>Movimentar</span></div>
+    </div>
+    <p class="mini">O disquete com a seta verde, no editor, é <em>salvar e sair</em>.</p></div></details>
+
+  <details class="sanfona"><summary>Atalhos do editor <span class="badge compl">Do manual do curso</span></summary><div class="corpo"><div class="tabela-wrap"><table class="tabela">
+    <thead><tr><th scope="col">Atalho</th><th scope="col">Uso</th></tr></thead>
+    <tbody>
+      <tr data-busca="1"><td><span class="key">Alt+R</span></td><td>Resumo (trecho que aparece na coluna Documentos da tabela de eventos).</td></tr>
+      <tr data-busca="1"><td><span class="key">Alt+5</span></td><td>Estilo citação.</td></tr>
+      <tr data-busca="1"><td><span class="key">Alt+1</span></td><td>Estilo paragrafoPadrão (restante do texto).</td></tr>
+      <tr data-busca="1"><td><span class="key">Alt+8</span></td><td>Estilo caputEmenta (ementa do acórdão; obrigatório).</td></tr>
+      <tr data-busca="1"><td><span class="key">Alt+D</span></td><td>Dispositivo (sentença). <strong>Nunca no voto.</strong></td></tr>
+    </tbody></table></div></div></details>
+
+  <details class="sanfona"><summary>Evento 12311</summary><div class="corpo"><p><span class="ui">Decisão/Despacho – Análise de Relator Concluída (12311)</span>. Lançado em <span class="ui">Evento a ser lançado:</span>, na tela <em>Movimentação Processual</em>. Nenhum outro campo precisa ser marcado.</p></div></details>
+  <p class="rev">Seção revisada em 21/10/2026.</p>
+</section>
+<!--@consulta3-->
 <!--@consulta-->
       </div>
     </main>
