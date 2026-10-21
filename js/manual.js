@@ -134,12 +134,12 @@
   function norm(t) { return (t || "").toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/\s+/g, " ").trim(); }
   var indice = [], seq = 0;
   function nomeSecao(el) { var s = el.closest("[data-busca-sec]"); return s ? s.getAttribute("data-busca-sec") : ""; }
-  function add(el, rotulo) {
+  function add(el, rotulo, soTitulo) {
     if (!el.id) el.id = "b-" + (++seq);
-    indice.push({ el: el, rotulo: rotulo.trim(), secao: nomeSecao(el), texto: norm(rotulo + " " + el.textContent) });
+    indice.push({ el: el, rotulo: rotulo.trim(), secao: nomeSecao(el), texto: norm(rotulo + (soTitulo ? "" : " " + el.textContent)) });
   }
   $$(".passo").forEach(function (p) { add(p, ($("h3", p) || p).textContent); });
-  $$("section[data-busca-sec]").forEach(function (s) { var h = $("h1,h2", s); if (h) add(s, h.textContent); });
+  $$("section[data-busca-sec]").forEach(function (s) { var h = $("h1,h2", s); if (h) add(s, h.textContent, true); });
   $$(".ramo").forEach(function (r) { add(r, $("h3", r).textContent); });
   $$("details.sanfona").forEach(function (d) { add(d, $("summary", d).textContent); });
   $$("tr[data-busca]").forEach(function (r) { add(r, r.cells[0].textContent); });
