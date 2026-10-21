@@ -164,3 +164,8 @@ details.sanfona > .corpo { padding: 0 20px 18px; }
   .fluxo { grid-template-columns: 1fr; }
   .hero { padding: 24px 20px; }
 }
+
+/* selo de conteúdo vindo do curso/plano, além do documento-base do gabinete */
+.badge.compl { background: var(--surface-2); color: var(--eproc-petrol); border: 1px solid var(--line); }
+.mini { font-size: .9rem; color: var(--ink-soft); }
+.icones img { image-rendering: auto; }
