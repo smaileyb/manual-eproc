@@ -15,7 +15,7 @@ Para os vídeos aparecerem, copie os MP4 para a pasta `videos/` (eles ficam fora
 ```
 index.html            conteúdo (uma seção por etapa)
 css/                  tokens (cores), base, layout, componentes, impressão
-js/manual.js          rodapé dos passos, destaque da seção atual, filtro da tabela, gaveta no celular, impressão
+js/manual.js          rodapé dos passos, trilho da seção atual, tema, transições, filtro, gaveta, impressão
 assets/img/           imagens do documento do gabinete
 assets/fonts/         Newsreader e Atkinson Hyperlegible (locais, licença OFL)
 videos/               clipes MP4 (não versionados) e quadros de capa
@@ -24,7 +24,13 @@ docs/                 conferência contra o documento-base
 
 ## Design
 
-Cores do próprio eproc (cabeçalho petróleo, azul dos botões, amarelo dos ícones) e uma cor por etapa: 1 azul, 2 roxo, 3 verde, 4 laranja. A página abre em “O fluxo do gabinete” (4 cartões, com a bifurcação A ou B na Etapa 2). Linha do tempo lateral, passos em cartões numerados e caixas Dica, Atenção, Regra do gabinete e Resultado esperado. Não há busca, barra de progresso nem modo foco.
+O conceito é o **trilho**: o fluxo é uma sequência com uma bifurcação (A ou B na Etapa 2), e a página o desenha assim. A abertura, “O fluxo do gabinete”, traz o trilho com as 4 estações, desenhado uma vez ao carregar. O painel lateral é o mesmo trilho, com o trecho percorrido acompanhando a leitura, e cada passo é uma estação numerada no trilho da sua etapa.
+
+- **Cores:** petróleo e amarelo vêm do próprio eproc. O amarelo serve só de marca-texto (foco do teclado, estação atual e sublinhado dos nomes de tela, como **Consultar**). Cada etapa tem uma cor: 1 azul, 2 roxo, 3 verde, 4 laranja. Os tokens ficam em `css/tokens.css`.
+- **Tema escuro:** segue o sistema. O botão **Tema escuro / Tema claro** no topo troca o tema e guarda a escolha neste navegador. A impressão sai sempre no tema claro.
+- **Tipografia:** Newsreader (serifa) nos títulos e nos numerais das etapas, Atkinson Hyperlegible Next no texto e Atkinson Hyperlegible Mono nos atalhos de teclado. Todas locais, em `assets/fonts/`.
+- **Movimento:** o desenho do trilho na abertura é o único movimento automático. O resto responde a uma ação: troca de tema, recolhíveis, gaveta no celular, estação que pulsa ao seguir “Próximo passo”. Com “reduzir movimento” ligado no sistema, tudo fica instantâneo.
+- Caixas Dica, Atenção, Regra do gabinete e Resultado esperado. Não há busca, barra de progresso nem modo foco.
 
 ## Como incluir um vídeo novo
 
