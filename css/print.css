@@ -1,26 +1,38 @@
-/* Impressão e PDF: tudo aberto, uma coluna, sem navegação. */
+/* Impressão e PDF: tudo aberto, uma coluna, sem navegação, sempre no tema claro. */
 @page { size: A4; margin: 16mm 14mm; }
 @media print {
+  /* seletor reforçado para vencer o tema escuro escolhido na tela */
+  :root:root:root {
+    color-scheme: light;
+    --paper: #fff; --sheet: #fff; --sheet-2: #f1f4f6;
+    --ink: #000; --ink-2: #222; --muted: #555; --rule: #bbb; --rule-strong: #999;
+    --petrol: #0b4a66; --link: #0b4a66;
+    --s1: #1666a0; --s2: #5b45b0; --s3: #1e7a4a; --s4: #b4570c;
+    --k-dica: #0d6a93; --k-atencao: #8a5300;
+    --tint: 8%; --tint-strong: 14%;
+  }
   html { scroll-behavior: auto; }
-  body { background: #fff; font-size: 10.5pt; line-height: 1.5; color: #000; }
+  body { background: #fff; font-size: 10.5pt; line-height: 1.5; }
   .topbar, .side, .stepper-bar, .skip, .passo-foot, .filtro, .escolha .ou { display: none !important; }
   .shell { display: block; max-width: none; }
   main { padding: 0; }
   .wrap { max-width: none; }
-  .etapa { page-break-before: always; margin-bottom: 0; }
-  #fluxo { page-break-before: auto; }
-  .sec-title { page-break-before: auto; margin-top: 24pt; }
-  .etapa-head, .passo, .fluxo a, .tabela, details.sanfona, .opcao { box-shadow: none !important; border: 1px solid #999; }
-  .etapa-head { border-top: 6px solid var(--c); }
-  .passo, .callout, figure, .tabela tr { break-inside: avoid; }
-  .fluxo li:not(:last-child) a::after { display: none; }
+  .etapa { break-before: page; margin-bottom: 0; }
+  .sec-title { margin-top: 24pt; }
+  .trilho-hero { max-width: 15cm; margin: 12pt auto 0; }
+  .etapa-num { font-size: 48pt; }
+  .passo, .tabela, details.sanfona, .opcao { border: 1px solid #999; }
+  .passo, .callout, figure, .tabela tr, .opcao { break-inside: avoid; }
+  .passo::before { background: #fff; }
+  .shot img { filter: none !important; }
   /* vídeos: no papel, só a legenda */
   .clipe-frame { display: none; }
   .clipe { border: 1px dashed #666; border-radius: 8px; padding: 6px 10px; margin: 10px 0; }
   .clipe .clipe-cap { margin: 0; }
   .clipe .clipe-cap::before { content: "▶ Vídeo no manual online:"; font-weight: 700; }
-  details.sanfona > summary::after { content: ""; }
+  /* recolhíveis abertos por inteiro (o JS abre todos antes de imprimir) */
+  details.sanfona::details-content { block-size: auto !important; content-visibility: visible !important; }
+  details.sanfona > summary::after { display: none; }
   a { color: inherit; text-decoration: none; }
-  .tabela th { background: #e8eef2 !important; color: #000; }
   .tabela-wrap { overflow: visible; }
 }
