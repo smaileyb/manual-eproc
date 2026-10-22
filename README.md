@@ -17,7 +17,7 @@ index.html            conteúdo (uma seção por etapa)
 css/                  tokens (cores), base, layout, componentes, impressão
 js/manual.js          rodapé dos passos, destaque da seção atual, filtro da tabela, gaveta no celular, impressão
 assets/img/           imagens do documento do gabinete
-assets/fonts/         Inter (local, licença OFL)
+assets/fonts/         Newsreader e Atkinson Hyperlegible (locais, licença OFL)
 videos/               clipes MP4 (não versionados) e quadros de capa
 docs/                 conferência contra o documento-base
 ```
