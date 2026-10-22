@@ -22,4 +22,6 @@ Sem selos na página (retirados em 22/10/2026):
 
 - Atalhos e estilos do editor (Alt+R, Alt+5, Alt+1, Alt+8, Alt+D), nota de fim de texto, tópico ACÓRDÃO em branco e liberação de pop-ups: regras do gabinete e do curso registradas no plano do projeto.
 - Caminhos de menu para abrir a lista de processos (Etapa 1) e roteiro de assinatura, pauta e movimentação em lote (Etapas 3 e 4), vindos do plano e dos manuais do curso.
-- Pendências: recuos, quem faz as etapas pós-sessão, campo Texto Padrão na Nova Minuta e localizadores mantidos no lote do evento 12311.
+- Ementa (cabeçalho em caputEmenta, Alt+8; restante em paragrafoComRecuo, Alt+3) e tópico ACÓRDÃO em branco: regras do gabinete confirmadas em 22/10/2026.
+- Evento 12311: não é necessário agendar a troca de localizadores, que já foi feita na inclusão em pauta (decisão de 22/10/2026).
+- Pendências ficam no plano do projeto, não na página.
