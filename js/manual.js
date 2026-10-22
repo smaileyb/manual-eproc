@@ -26,20 +26,34 @@
     });
   });
 
-  /* ---------- destaque da seção atual (painel lateral e barra de etapas) ---------- */
+  /* ---------- destaque da seção atual: estação do trilho e barra de etapas ---------- */
   var secoes = $$("[data-spy]");
-  function marcarAtivo(id) {
-    $$(".timeline > li").forEach(function (li) {
-      var a = $("a.tl", li);
-      li.classList.toggle("ativo", !!a && a.dataset.alvo === id);
-    });
-    $$(".consulta a").forEach(function (a) { a.classList.toggle("ativo", a.dataset.alvo === id); });
-    $$(".stepper-bar a").forEach(function (a) {
-      var on = a.getAttribute("href") === "#" + id;
-      a.classList.toggle("ativo", on);
-      if (on && a.scrollIntoView) { try { a.scrollIntoView({ block: "nearest", inline: "center" }); } catch (e) {} }
-    });
+  var trilho = $(".timeline"), estacoes = $$(".timeline > li"), idAtual = null;
+  function centro(el) { var r = el.getBoundingClientRect(); return r.top + r.height / 2; }
+  // o trilho vai da primeira à última estação; o trecho percorrido, até a estação atual
+  function medirTrilho() {
+    var topo = trilho.getBoundingClientRect().top;
+    var nums = estacoes.map(function (li) { return $(".tl-num", li); });
+    var ini = centro(nums[0]) - topo, fim = centro(nums[nums.length - 1]) - topo;
+    var i = estacoes.findIndex(function (li) { return li.classList.contains("ativo"); });
+    var ate = i < 0 ? (idAtual ? fim : ini) : centro(nums[i]) - topo;
+    trilho.style.setProperty("--rail-top", ini + "px");
+    trilho.style.setProperty("--rail-h", (fim - ini) + "px");
+    trilho.style.setProperty("--rail-fill", (ate - ini) + "px");
+    var etapa = i < 0 ? "0" : estacoes[i].dataset.etapa;
+    trilho.style.setProperty("--rail-c", etapa === "0" ? "var(--petrol)" : "var(--s" + etapa + ")");
   }
+  function marcarAtivo(id) {
+    idAtual = id;
+    var i = estacoes.findIndex(function (li) { var a = $("a.tl", li); return !!a && a.dataset.alvo === id; });
+    estacoes.forEach(function (li, k) { li.classList.toggle("ativo", k === i); li.classList.toggle("passou", i >= 0 && k < i); });
+    $$(".consulta a").forEach(function (a) { a.classList.toggle("ativo", a.dataset.alvo === id); });
+    var barra = $$(".stepper-bar a"), j = barra.findIndex(function (a) { return a.getAttribute("href") === "#" + id; });
+    barra.forEach(function (a, k) { a.classList.toggle("ativo", k === j); a.classList.toggle("passou", j >= 0 && k < j); });
+    medirTrilho();
+  }
+  window.addEventListener("resize", medirTrilho);
+  medirTrilho();
   if ("IntersectionObserver" in window) {
     var visiveis = {};
     var io = new IntersectionObserver(function (es) {
