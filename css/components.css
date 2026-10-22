@@ -128,19 +128,42 @@ figcaption { font-size: var(--fs-0); color: var(--muted); margin-top: 8px; }
 .ramo h3 { font-size: var(--fs-4); margin: 0 0 4px; }
 .ramo p { color: var(--ink-2); margin: 0; }
 
-/* ---------- O fluxo do gabinete ---------- */
-.fluxo { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin: 0 0 64px; padding: 0; list-style: none; }
-.fluxo li { margin: 0; }
-.fluxo a { display: block; height: 100%; position: relative; text-decoration: none; color: var(--ink); background: var(--sheet); border: 1px solid var(--rule); border-radius: var(--radius-sheet); padding: 16px; border-top: 4px solid var(--c); }
+/* ---------- O fluxo do gabinete: o trilho desenhado uma vez, ao abrir ---------- */
+.trilho-hero { display: block; width: 100%; height: auto; margin: 28px 0 4px; overflow: visible; }
+.th-seg path { fill: none; stroke-width: 3; stroke-linecap: round; stroke-dasharray: 1; animation: th-traca .4s var(--ease-in-out) both; }
+.th-seg .s1 { stroke: var(--s1); animation-delay: .15s; }
+.th-seg .s2 { stroke: var(--s2); animation-delay: .5s; animation-duration: .45s; }
+.th-seg .s3 { stroke: var(--s3); animation-delay: .95s; animation-duration: .35s; }
+.th-ramo { font-family: var(--serif); font-style: italic; font-weight: 600; font-size: 17px; fill: var(--s2); text-anchor: middle; animation: th-surge .3s ease-out .8s both; }
+.th-est { transform-box: fill-box; transform-origin: center; animation: th-acende .35s var(--ease-out) both; }
+.th-est circle { fill: var(--c); stroke: var(--paper); stroke-width: 5; }
+.th-est text { fill: var(--sheet); font-family: var(--serif); font-weight: 600; font-size: 19px; text-anchor: middle; dominant-baseline: central; }
+.th-est.e1 { --c: var(--s1); animation-delay: 0s; }
+.th-est.e2 { --c: var(--s2); animation-delay: .4s; }
+.th-est.e3 { --c: var(--s3); animation-delay: .9s; }
+.th-est.e4 { --c: var(--s4); animation-delay: 1.25s; }
+@keyframes th-traca { from { stroke-dashoffset: 1; } }
+@keyframes th-acende { from { opacity: 0; transform: scale(.4); } }
+@keyframes th-surge { from { opacity: 0; } }
+
+/* cada cartão fica sob a sua estação (colunas de 200 em 800 do desenho) */
+.fluxo { display: grid; grid-template-columns: repeat(4, 1fr); margin: 0 0 72px; padding: 0; list-style: none; }
+.fluxo li { margin: 0; padding: 0 6px; }
+.fluxo a {
+  display: block; height: 100%; text-decoration: none; color: var(--ink-2); font-size: var(--fs-1); line-height: 1.45;
+  padding: 12px 14px 14px; border-radius: 12px; text-align: center;
+  transition: background-color var(--dur-2);
+}
+.fluxo a:hover { background: var(--sheet); color: var(--ink-2); }
 .fluxo li[data-etapa="1"] { --c: var(--s1); }
 .fluxo li[data-etapa="2"] { --c: var(--s2); }
 .fluxo li[data-etapa="3"] { --c: var(--s3); }
 .fluxo li[data-etapa="4"] { --c: var(--s4); }
-.fluxo .n { display: block; font-family: var(--serif); font-weight: 600; font-size: 2rem; line-height: 1; color: var(--c); margin-bottom: 8px; }
-.fluxo b { display: block; line-height: 1.25; margin-bottom: 4px; }
+.fluxo .n { display: none; }
+.fluxo b { display: block; font-family: var(--serif); font-size: var(--fs-3); font-weight: 600; line-height: 1.2; color: var(--ink); margin-bottom: 6px; }
 .fluxo .quem { display: block; font-size: var(--fs-0); color: var(--muted); margin-top: 8px; }
-.fluxo .fork { display: block; margin-top: 8px; font-size: var(--fs-0); color: var(--ink-2); }
-.fluxo .fork em { font-style: normal; font-weight: 800; color: var(--c); }
+.fluxo .fork { display: block; margin-top: 8px; font-size: var(--fs-0); }
+.fluxo .fork em { font-family: var(--serif); font-style: italic; font-weight: 600; color: var(--c); }
 
 /* ---------- tabelas ---------- */
 .tabela { width: 100%; border-collapse: separate; border-spacing: 0; background: var(--sheet); border: 1px solid var(--rule); border-radius: var(--radius-sheet); overflow: hidden; font-size: var(--fs-1); }
@@ -180,7 +203,6 @@ details.sanfona > .corpo { padding: 0 18px 16px; }
 tr.oculta { display: none; }
 
 @media (max-width: 860px) {
-  .fluxo { grid-template-columns: 1fr 1fr; }
   .escolha { grid-template-columns: 1fr; }
   .escolha .ou { text-align: center; }
 }
@@ -200,5 +222,10 @@ tr.oculta { display: none; }
   .ramo { padding-left: 0; }
   .passo { padding: 18px 18px 16px; }
   .passo::before { position: static; width: 38px; height: 38px; margin-bottom: 10px; }
-  .fluxo { grid-template-columns: 1fr; }
+  /* no celular o desenho dá lugar à lista, cada etapa com o seu numeral */
+  .trilho-hero { display: none; }
+  .fluxo { grid-template-columns: 1fr; gap: 4px; margin-top: 20px; border-left: 2px solid var(--rule); }
+  .fluxo li { padding: 0; }
+  .fluxo a { display: grid; grid-template-columns: 34px 1fr; column-gap: 10px; text-align: left; padding: 10px 12px 10px 14px; }
+  .fluxo .n { display: block; grid-row: span 4; font-family: var(--serif); font-weight: 600; font-size: 1.8rem; line-height: 1; color: var(--c); }
 }
