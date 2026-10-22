@@ -39,8 +39,12 @@
   font-family: var(--serif); font-weight: 600; font-size: 1.2rem;
   transition: background-color var(--dur-2), color var(--dur-2), box-shadow var(--dur-2);
 }
-.passo:target::before, .passo.chegou::before {
-  background: var(--c); color: var(--sheet); box-shadow: 0 0 0 5px color-mix(in srgb, var(--marker) 60%, transparent);
+.passo:target::before { background: var(--c); color: var(--sheet); box-shadow: 0 0 0 5px color-mix(in srgb, var(--marker) 60%, transparent); }
+/* ao chegar por um link (ex.: "Próximo passo"), a estação pulsa uma vez */
+.passo.chegou::before { background: var(--c); color: var(--sheet); animation: estacao-chega 1.1s var(--ease-out); }
+@keyframes estacao-chega {
+  0% { box-shadow: 0 0 0 0 color-mix(in srgb, var(--marker) 85%, transparent); }
+  100% { box-shadow: 0 0 0 18px color-mix(in srgb, var(--marker) 0%, transparent); }
 }
 .passo h3 { margin-bottom: .4em; }
 .passo > p:last-child { margin-bottom: 0; }
@@ -94,6 +98,8 @@ figcaption { font-size: var(--fs-0); color: var(--muted); margin-top: 8px; }
 .clipe { margin: 20px 0 8px; }
 .clipe-frame { position: relative; aspect-ratio: 16 / 9; border-radius: 12px; overflow: hidden; background: #0b1820; border: 1px solid var(--rule); }
 .clipe-frame video { width: 100%; height: 100%; object-fit: contain; background: #0b1820; }
+.js .clipe-frame video { opacity: 0; transition: opacity var(--dur-3) ease-out; }
+.js .clipe-frame video.pronto { opacity: 1; }
 .clipe-cap { display: flex; flex-wrap: wrap; gap: 4px 10px; align-items: baseline; font-size: var(--fs-0); color: var(--muted); margin-top: 8px; }
 .clipe-cap span:first-child { color: var(--ink-2); font-weight: 600; }
 .clipe .slot {
@@ -187,6 +193,15 @@ details.sanfona > summary::after {
 }
 details.sanfona[open] > summary::after { transform: translateY(2px) rotate(-135deg); }
 details.sanfona > .corpo { padding: 0 18px 16px; }
+/* abrir e fechar com a altura animada, onde o navegador permite */
+@supports selector(::details-content) {
+  details.sanfona { interpolate-size: allow-keywords; }
+  details.sanfona::details-content {
+    block-size: 0; overflow: clip;
+    transition: block-size var(--dur-3) var(--ease-out), content-visibility var(--dur-3) allow-discrete;
+  }
+  details.sanfona[open]::details-content { block-size: auto; }
+}
 
 .sec-title { margin-top: 72px; }
 .rev { font-size: var(--fs-0); color: var(--muted); margin: 0 0 18px; }

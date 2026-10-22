@@ -3,6 +3,7 @@
   "use strict";
   var $ = function (s, r) { return (r || document).querySelector(s); };
   var $$ = function (s, r) { return Array.prototype.slice.call((r || document).querySelectorAll(s)); };
+  document.documentElement.classList.add("js");
 
   /* ---------- rodapé de cada passo: pontos e "próximo passo" ---------- */
   $$(".grupo").forEach(function (g) {
@@ -111,6 +112,28 @@
       cont.textContent = q ? n + " de " + linhas.length : "";
     });
   }
+
+  /* ---------- ao seguir um link para um passo, a estação pulsa quando a rolagem termina ---------- */
+  document.addEventListener("click", function (e) {
+    var a = e.target.closest('a[href^="#"]');
+    var alvo = a && a.hash.length > 1 ? document.getElementById(a.hash.slice(1)) : null;
+    if (!alvo || !alvo.classList.contains("passo") || reduzMov.matches) return;
+    var feito = false;
+    function pulsar() {
+      if (feito) return; feito = true;
+      alvo.classList.remove("chegou"); void alvo.offsetWidth; alvo.classList.add("chegou");
+    }
+    if ("onscrollend" in window) window.addEventListener("scrollend", pulsar, { once: true });
+    setTimeout(pulsar, 900);
+  });
+  $$(".passo").forEach(function (p) { p.addEventListener("animationend", function () { p.classList.remove("chegou"); }); });
+
+  /* ---------- vídeos aparecem suavemente quando ficam prontos ---------- */
+  $$(".clipe video").forEach(function (v) {
+    function pronto() { v.classList.add("pronto"); }
+    if (v.readyState >= 1) pronto();
+    else { v.addEventListener("loadedmetadata", pronto, { once: true }); setTimeout(pronto, 2500); }
+  });
 
   /* ---------- vídeo ausente: avisa em vez de mostrar um quadro vazio ---------- */
   $$(".clipe video source").forEach(function (src) {
