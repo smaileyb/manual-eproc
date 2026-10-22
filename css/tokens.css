@@ -1,5 +1,5 @@
-/* Tokens de design — cores extraídas do próprio eproc (cabeçalho petróleo, botões azuis,
-   ícones amarelo e verde) e uma cor por etapa do fluxo. */
+/* Tokens de design. Petróleo e amarelo vêm do próprio eproc; o amarelo é usado como
+   marca-texto (foco, nomes de tela, estação ativa). Uma cor por etapa do fluxo. */
 /* Fontes locais (OFL): Newsreader nos títulos, Atkinson Hyperlegible Next no texto,
    Atkinson Hyperlegible Mono nos atalhos de teclado. */
 @font-face {
@@ -51,45 +51,136 @@
   unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
 }
 
+/* ---------- tema claro (padrão) ---------- */
 :root {
-  /* eproc */
-  --eproc-deep: #00405f;
-  --eproc-petrol: #005680;
-  --eproc-blue: #007ebd;
-  --eproc-cyan: #0d9bc1;
-  --eproc-yellow: #fecc35;
-  --eproc-green: #4caf50;
-  --eproc-red: #d9534f;
+  color-scheme: light;
 
-  /* neutros */
-  --ink: #16242e;
-  --ink-soft: #3c4c58;
-  --muted: #5a6a76;
-  --line: #d5dee4;
-  --bg: #f3f6f8;
-  --surface: #ffffff;
-  --surface-2: #eaf0f4;
+  --paper: #eef2f4;      /* fundo da página */
+  --sheet: #ffffff;      /* superfície de leitura */
+  --sheet-2: #f4f7f9;    /* superfície recuada (chips, cabeçalho de tabela) */
+  --ink: #13222b;
+  --ink-2: #3a4b56;
+  --muted: #5c6c77;
+  --rule: #d6dfe4;
+  --rule-strong: #b6c4cc;
+  --petrol: #0b4a66;     /* marca, trilho */
+  --link: #0d6a93;
+  --marker: #f2c230;     /* amarelo eproc, só como destaque */
+  --on-marker: #13222b;
+  --backdrop: rgba(9, 28, 38, .5);
 
-  /* uma cor por etapa (texto) e seu tom claro (fundo) */
-  --e1: #00659b;  --e1-bg: #e4f2fa;
-  --e2: #5b3fb3;  --e2-bg: #eeeafa;
-  --e3: #1b7a43;  --e3-bg: #e3f3ea;
-  --e4: #b05200;  --e4-bg: #fdeedd;
+  /* etapas */
+  --s1: #1666a0;
+  --s2: #5b45b0;
+  --s3: #1e7a4a;
+  --s4: #b4570c;
 
   /* caixas de destaque */
-  --dica: #00659b;      --dica-bg: #e4f2fa;
-  --atencao: #9a5b00;   --atencao-bg: #fff4d6;
-  --regra: #5b3fb3;     --regra-bg: #eeeafa;
-  --resultado: #1b7a43; --resultado-bg: #e3f3ea;
+  --k-dica: #0d6a93;
+  --k-atencao: #8a5300;
+  --k-regra: var(--s2);
+  --k-resultado: var(--s3);
 
-  --radius: 12px;
-  --radius-sm: 8px;
-  --shadow: 0 1px 2px rgba(0, 40, 60, .08), 0 6px 20px rgba(0, 40, 60, .08);
-  --shadow-pop: 0 2px 4px rgba(0, 40, 60, .12), 0 12px 32px rgba(0, 40, 60, .18);
+  /* tintas: quanto da cor entra na superfície */
+  --tint: 9%;
+  --tint-strong: 16%;
+}
 
-  --header-h: 60px;
-  --side-w: 310px;
+/* ---------- tema escuro: segue o sistema, ou escolha salva no botão ---------- */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --paper: #0f1c23;
+    --sheet: #16262f;
+    --sheet-2: #1d313c;
+    --ink: #e4ecef;
+    --ink-2: #b9c8d0;
+    --muted: #8fa3ae;
+    --rule: #2a3f4b;
+    --rule-strong: #3d5664;
+    --petrol: #7cc3e0;
+    --link: #8acdeb;
+    --backdrop: rgba(2, 10, 14, .62);
+    --s1: #6cb2e8;
+    --s2: #ab9cf2;
+    --s3: #62c48e;
+    --s4: #f0a35e;
+    --k-dica: #8acdeb;
+    --k-atencao: #e9b949;
+    --tint: 13%;
+    --tint-strong: 22%;
+  }
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --paper: #0f1c23;
+  --sheet: #16262f;
+  --sheet-2: #1d313c;
+  --ink: #e4ecef;
+  --ink-2: #b9c8d0;
+  --muted: #8fa3ae;
+  --rule: #2a3f4b;
+  --rule-strong: #3d5664;
+  --petrol: #7cc3e0;
+  --link: #8acdeb;
+  --backdrop: rgba(2, 10, 14, .62);
+  --s1: #6cb2e8;
+  --s2: #ab9cf2;
+  --s3: #62c48e;
+  --s4: #f0a35e;
+  --k-dica: #8acdeb;
+  --k-atencao: #e9b949;
+  --tint: 13%;
+  --tint-strong: 22%;
+}
+
+/* ---------- independentes do tema ---------- */
+:root {
   --font: "Atkinson Hyperlegible Next", "Segoe UI", system-ui, -apple-system, Roboto, Arial, sans-serif;
   --serif: "Newsreader", Georgia, "Times New Roman", serif;
   --mono: "Atkinson Hyperlegible Mono", ui-monospace, "Cascadia Code", Consolas, monospace;
+
+  /* escala tipográfica (~1,25) a partir do corpo de 17,5px */
+  --fs-0: .875rem;
+  --fs-1: .97rem;
+  --fs-2: 1.094rem;
+  --fs-3: 1.3125rem;
+  --fs-4: 1.625rem;
+  --fs-5: 2.125rem;
+  --fs-6: 2.875rem;
+
+  --radius-sheet: 14px;
+  --radius-chip: 6px;
+  --measure: 68ch;
+
+  --ease-out: cubic-bezier(.22, 1, .36, 1);
+  --ease-in-out: cubic-bezier(.65, 0, .35, 1);
+  --dur-1: 120ms;
+  --dur-2: 220ms;
+  --dur-3: 420ms;
+
+  --header-h: 60px;
+  --side-w: 300px;
+
+  /* nomes antigos, apontando para os novos, até o layout e os componentes serem refeitos */
+  --eproc-deep: var(--petrol);
+  --eproc-petrol: var(--petrol);
+  --eproc-blue: var(--link);
+  --eproc-yellow: var(--marker);
+  --line: var(--rule);
+  --bg: var(--paper);
+  --surface: var(--sheet);
+  --surface-2: var(--sheet-2);
+  --e1: var(--s1); --e1-bg: color-mix(in srgb, var(--s1) var(--tint), var(--sheet));
+  --e2: var(--s2); --e2-bg: color-mix(in srgb, var(--s2) var(--tint), var(--sheet));
+  --e3: var(--s3); --e3-bg: color-mix(in srgb, var(--s3) var(--tint), var(--sheet));
+  --e4: var(--s4); --e4-bg: color-mix(in srgb, var(--s4) var(--tint), var(--sheet));
+  --dica: var(--k-dica); --dica-bg: color-mix(in srgb, var(--k-dica) var(--tint), var(--sheet));
+  --atencao: var(--k-atencao); --atencao-bg: color-mix(in srgb, var(--k-atencao) var(--tint), var(--sheet));
+  --regra: var(--k-regra); --regra-bg: color-mix(in srgb, var(--k-regra) var(--tint), var(--sheet));
+  --resultado: var(--k-resultado); --resultado-bg: color-mix(in srgb, var(--k-resultado) var(--tint), var(--sheet));
+  --radius: var(--radius-sheet);
+  --radius-sm: 10px;
+  --shadow: 0 0 0 1px var(--rule);
+  --shadow-pop: 0 0 0 1px var(--rule-strong), 0 18px 40px -18px rgba(0, 0, 0, .35);
 }
