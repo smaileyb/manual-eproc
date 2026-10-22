@@ -41,7 +41,7 @@ Conventional Commits, em português: `feat`, `fix`, `content`, `style`, `docs`, 
 
 ## Impressão e PDF
 
-O botão **Imprimir** (ou Ctrl+P) abre todas as seções e troca os vídeos pela legenda. Escolha “Salvar como PDF”.
+O botão **Imprimir** (ou Ctrl+P) abre todos os recolhíveis e troca os vídeos pela legenda. Escolha “Salvar como PDF”.
 
 ## Repositório git
 

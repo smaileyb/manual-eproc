@@ -1,6 +1,6 @@
 # Conferência contra o documento-base
 
-O conteúdo do manual parte do documento do gabinete, *Fluxo de trabalho – Eproc.docx*. Esta lista registra onde cada parte dele está na página. Foi conferida em 21/10/2026 (63 verificações de trecho e imagem, sem falhas).
+O conteúdo do manual parte do documento do gabinete, *Fluxo de trabalho – Eproc.docx*. Esta lista registra onde cada parte dele está na página. Foi conferida em 21/10/2026 (63 verificações de trecho e imagem, sem falhas) e repetida em 22/10/2026, depois de enxugar a página: comparou-se a cobertura dos 61 parágrafos do documento antes e depois, sem perda de conteúdo, e as 9 imagens continuam em uso.
 
 | Documento do gabinete | Onde está no manual |
 |---|---|
