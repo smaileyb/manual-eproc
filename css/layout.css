@@ -20,7 +20,6 @@
   display: inline-flex; align-items: center; gap: 6px; white-space: nowrap;
 }
 .tool-btn:hover { background: rgba(255,255,255,.12); }
-.tool-btn[aria-pressed="true"] { background: var(--eproc-yellow); color: var(--eproc-deep); border-color: var(--eproc-yellow); }
 .menu-btn { display: none; }
 
 /* ---------- barra de etapas (celular) ---------- */

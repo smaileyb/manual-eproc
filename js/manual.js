@@ -3,7 +3,7 @@
   "use strict";
   var $ = function (s, r) { return (r || document).querySelector(s); };
   var $$ = function (s, r) { return Array.prototype.slice.call((r || document).querySelectorAll(s)); };
-  var KEY = "manual-eproc:feito:v1", KEY_FOCO = "manual-eproc:foco:v1";
+  var KEY = "manual-eproc:feito:v1";
 
   function lsGet(k) { try { return localStorage.getItem(k); } catch (e) { return null; } }
   function lsSet(k, v) { try { localStorage.setItem(k, v); } catch (e) { /* sem armazenamento: segue sem salvar */ } }
@@ -104,23 +104,7 @@
       for (var i = 0; i < secoes.length; i++) { if (visiveis[secoes[i].id]) { marcarAtivo(secoes[i].id); break; } }
     }, { rootMargin: "-30% 0px -60% 0px" });
     secoes.forEach(function (s) { io.observe(s); });
-
-    /* modo foco: o passo no centro da tela fica em evidência */
-    var ioPasso = new IntersectionObserver(function (es) {
-      es.forEach(function (e) { e.target.classList.toggle("em-foco", e.isIntersecting); });
-    }, { rootMargin: "-38% 0px -38% 0px" });
-    $$(".passo").forEach(function (p) { ioPasso.observe(p); });
   }
-
-  /* ---------- modo foco ---------- */
-  var focoBtn = $("#foco-btn");
-  function setFoco(on) {
-    document.body.classList.toggle("foco", on);
-    focoBtn.setAttribute("aria-pressed", String(on));
-    lsSet(KEY_FOCO, on ? "1" : "0");
-  }
-  focoBtn.addEventListener("click", function () { setFoco(!document.body.classList.contains("foco")); });
-  if (lsGet(KEY_FOCO) === "1") setFoco(true);
 
   /* ---------- gaveta (celular) ---------- */
   var menuBtn = $("#menu-btn");

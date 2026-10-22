@@ -16,7 +16,6 @@
   .etapa-head, .passo, .card, .fluxo a, .tabela, details.sanfona, .opcao { box-shadow: none !important; border: 1px solid #999; }
   .etapa-head { border-top: 6px solid var(--c); }
   .passo, .callout, figure, .tabela tr, .card { break-inside: avoid; }
-  body.foco .passo { opacity: 1; }
   .fluxo li:not(:last-child) a::after { display: none; }
   /* vídeos: no papel, só a legenda */
   .clipe-frame { display: none; }

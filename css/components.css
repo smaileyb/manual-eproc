@@ -37,10 +37,6 @@
 .next:hover { filter: brightness(.96); color: var(--c); }
 .next::after { content: "›"; font-size: 1.2em; line-height: 1; }
 
-/* modo foco: o passo em evidência, o resto esmaece (estilo spotlight do tour) */
-body.foco .passo { opacity: .38; }
-body.foco .passo.em-foco { opacity: 1; box-shadow: var(--shadow-pop); }
-
 /* ---------- caixas de destaque (balões) ---------- */
 .callout {
   position: relative; display: grid; grid-template-columns: 34px 1fr; gap: 12px;
