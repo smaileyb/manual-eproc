@@ -69,13 +69,12 @@
     });
   }
 
-  /* ---------- vídeo ausente: mostra o espaço reservado ---------- */
+  /* ---------- vídeo ausente: avisa em vez de mostrar um quadro vazio ---------- */
   $$(".clipe video source").forEach(function (src) {
     src.addEventListener("error", function () {
-      var fr = src.closest(".clipe-frame"), fig = src.closest(".clipe");
+      var fr = src.closest(".clipe-frame");
       if (!fr) return;
-      var id = fig.dataset.clipe || "";
-      fr.innerHTML = '<div class="slot" role="img"><em>Não foi possível carregar · ' + id + '</em><span class="play" aria-hidden="true"></span><strong>Vídeo indisponível neste computador</strong><span>Confira se o MP4 está na pasta <code>videos/</code>, ao lado de <code>index.html</code>, e se o navegador reproduz vídeo MP4 (H.264).</span></div>';
+      fr.innerHTML = '<div class="slot" role="img"><em>Vídeo não carregou</em><span class="play" aria-hidden="true"></span><strong>Vídeo indisponível neste computador</strong><span>Confira se o MP4 está na pasta <code>videos/</code>, ao lado de <code>index.html</code>, e se o navegador reproduz vídeo MP4 (H.264).</span></div>';
     });
   });
 
