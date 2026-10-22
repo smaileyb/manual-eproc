@@ -8,11 +8,11 @@
   color: #fff;
   border-bottom: 3px solid var(--eproc-yellow);
 }
-.brand { display: flex; align-items: center; gap: 10px; text-decoration: none; color: #fff; min-width: 0; }
+.brand { display: flex; align-items: center; gap: 10px; color: #fff; min-width: 0; cursor: default; }
 .brand-mark { width: 34px; height: 34px; border-radius: 9px; background: var(--eproc-yellow); color: var(--eproc-deep); display: grid; place-items: center; font-weight: 900; font-size: 1.1rem; flex: none; }
 .brand-text { line-height: 1.15; min-width: 0; }
 .brand-text strong { display: block; font-size: 1rem; }
-.brand-text span { font-size: .78rem; opacity: .8; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; display: block; }
+.brand-text span { font-size: .78rem; opacity: .9; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; display: block; }
 .topbar-tools { margin-left: auto; display: flex; align-items: center; gap: 10px; }
 .tool-btn {
   height: 38px; padding: 0 12px; border-radius: 10px; border: 1px solid rgba(255,255,255,.35);

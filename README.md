@@ -24,7 +24,7 @@ docs/                 conferência contra o documento-base
 
 ## Design
 
-Cores do próprio eproc (cabeçalho petróleo, azul dos botões, amarelo dos ícones) e uma cor por etapa: 1 azul, 2 roxo, 3 verde, 4 laranja. Linha do tempo lateral, passos em cartões numerados, caixas Dica, Atenção, Regra do gabinete e Resultado esperado, e modo foco inspirado em tours guiados.
+Cores do próprio eproc (cabeçalho petróleo, azul dos botões, amarelo dos ícones) e uma cor por etapa: 1 azul, 2 roxo, 3 verde, 4 laranja. A página abre em “O fluxo do gabinete” (4 cartões, com a bifurcação A ou B na Etapa 2). Linha do tempo lateral, passos em cartões numerados e caixas Dica, Atenção, Regra do gabinete e Resultado esperado. Não há busca, barra de progresso nem modo foco.
 
 ## Como incluir um vídeo que ainda está em produção
 

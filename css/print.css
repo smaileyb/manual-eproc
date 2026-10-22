@@ -3,19 +3,16 @@
 @media print {
   html { scroll-behavior: auto; }
   body { background: #fff; font-size: 10.5pt; line-height: 1.5; color: #000; }
-  .topbar, .side, .stepper-bar, .skip, .passo-foot, .filtro, .hero .cta, .escolha .ou { display: none !important; }
+  .topbar, .side, .stepper-bar, .skip, .passo-foot, .filtro, .escolha .ou { display: none !important; }
   .shell { display: block; max-width: none; }
   main { padding: 0; }
   .wrap { max-width: none; }
   .etapa { page-break-before: always; margin-bottom: 0; }
-  #comece-aqui, #etapa-1 { page-break-before: auto; }
+  #fluxo { page-break-before: auto; }
   .sec-title { page-break-before: auto; margin-top: 24pt; }
-  .hero { background: #fff !important; color: #000; border: 2px solid var(--eproc-petrol); box-shadow: none; }
-  .hero h1, .hero p { color: #000; }
-  .hero::after { display: none; }
-  .etapa-head, .passo, .card, .fluxo a, .tabela, details.sanfona, .opcao { box-shadow: none !important; border: 1px solid #999; }
+  .etapa-head, .passo, .fluxo a, .tabela, details.sanfona, .opcao { box-shadow: none !important; border: 1px solid #999; }
   .etapa-head { border-top: 6px solid var(--c); }
-  .passo, .callout, figure, .tabela tr, .card { break-inside: avoid; }
+  .passo, .callout, figure, .tabela tr { break-inside: avoid; }
   .fluxo li:not(:last-child) a::after { display: none; }
   /* vídeos: no papel, só a legenda */
   .clipe-frame { display: none; }

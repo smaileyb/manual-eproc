@@ -95,14 +95,8 @@ figcaption { font-size: .88rem; color: var(--muted); margin-top: 8px; }
 .ramo h3 { font-size: 1.35rem; margin: 0 0 4px; }
 .ramo p { color: var(--ink-soft); margin: 0; }
 
-/* ---------- Comece aqui ---------- */
-.hero { background: linear-gradient(135deg, var(--eproc-deep), var(--eproc-petrol)); color: #fff; border-radius: 18px; padding: 34px 34px 30px; box-shadow: var(--shadow); position: relative; overflow: hidden; margin-bottom: 26px; }
-.hero::after { content: ""; position: absolute; right: -60px; top: -60px; width: 220px; height: 220px; border-radius: 50%; background: var(--eproc-yellow); opacity: .16; }
-.hero h1 { color: #fff; margin-bottom: .3em; }
-.hero p { color: #d7ebf5; max-width: 60ch; margin-bottom: .6em; font-size: 1.05rem; }
-.hero .cta { display: inline-flex; margin-top: 10px; background: var(--eproc-yellow); color: var(--eproc-deep); font-weight: 800; text-decoration: none; padding: 11px 18px; border-radius: 10px; }
-.hero .cta:hover { filter: brightness(.95); color: var(--eproc-deep); }
-.fluxo { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin: 0 0 12px; padding: 0; list-style: none; counter-reset: f; }
+/* ---------- O fluxo do gabinete ---------- */
+.fluxo { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin: 0 0 56px; padding: 0; list-style: none; counter-reset: f; }
 .fluxo li { margin: 0; }
 .fluxo a { display: block; height: 100%; position: relative; text-decoration: none; color: var(--ink); background: var(--surface); border-radius: var(--radius); box-shadow: var(--shadow); padding: 16px 16px 14px; border-top: 5px solid var(--c); }
 .fluxo li[data-etapa="1"] { --c: var(--e1); --cbg: var(--e1-bg); }
@@ -116,10 +110,6 @@ figcaption { font-size: .88rem; color: var(--muted); margin-top: 8px; }
 .fluxo .fork { display: block; margin-top: 8px; font-size: .84rem; color: var(--ink-soft); }
 .fluxo .fork em { font-style: normal; font-weight: 800; color: var(--c); }
 .fluxo li:not(:last-child) a::after { content: "›"; position: absolute; right: -12px; top: 50%; transform: translateY(-50%); font-size: 1.7rem; font-weight: 800; color: var(--muted); z-index: 2; }
-.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; margin: 18px 0; }
-.card { background: var(--surface); border-radius: var(--radius); box-shadow: var(--shadow); padding: 16px 18px; }
-.card h3 { font-size: 1.02rem; }
-.card p:last-child { margin-bottom: 0; }
 
 /* ---------- tabelas ---------- */
 .tabela { width: 100%; border-collapse: separate; border-spacing: 0; background: var(--surface); border-radius: var(--radius); box-shadow: var(--shadow); overflow: hidden; font-size: .96rem; }
@@ -155,7 +145,6 @@ details.sanfona > .corpo { padding: 0 20px 18px; }
   .passo { padding: 18px 18px 14px 18px; }
   .passo::before { position: static; margin-bottom: 8px; width: 38px; height: 38px; }
   .fluxo { grid-template-columns: 1fr; }
-  .hero { padding: 24px 20px; }
 }
 
 /* selo de conteúdo vindo do curso/plano, além do documento-base do gabinete */
@@ -174,4 +163,3 @@ tr.oculta { display: none; }
 }
 
 .clipe .slot code { background: rgba(255,255,255,.12); padding: 0 6px; border-radius: 4px; }
-@media (max-width: 560px) { .hero::after { display: none; } }

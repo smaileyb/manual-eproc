@@ -17,10 +17,10 @@
 
   <header class="topbar">
     <button class="tool-btn menu-btn" id="menu-btn" aria-expanded="false" aria-controls="lateral">☰ <span class="lbl">Etapas</span></button>
-    <a class="brand" href="#comece-aqui" aria-label="Manual do Gabinete, início">
+    <div class="brand">
       <span class="brand-mark" aria-hidden="true">e</span>
       <span class="brand-text"><strong>Manual do Gabinete</strong><span>1ª Relatoria · 1ª Turma Recursal · eproc</span></span>
-    </a>
+    </div>
     <div class="topbar-tools">
       <button class="tool-btn" id="print-btn" title="Imprimir ou salvar em PDF">⎙ <span class="lbl">Imprimir</span></button>
     </div>
@@ -37,7 +37,7 @@
     <aside class="side" id="lateral" aria-label="Etapas do fluxo">
       <h2>O fluxo em 4 etapas</h2>
       <ol class="timeline">
-        <li data-etapa="0"><a class="tl" href="#comece-aqui" data-alvo="comece-aqui"><span class="tl-num"><span>★</span></span><span>Comece aqui<small>O fluxo em uma página</small></span></a></li>
+        <li data-etapa="0"><a class="tl" href="#fluxo" data-alvo="fluxo"><span class="tl-num"><span>★</span></span><span>O fluxo do gabinete<small>Visão geral</small></span></a></li>
         <li data-etapa="1"><a class="tl" href="#etapa-1" data-alvo="etapa-1"><span class="tl-num"><span>1</span></span><span>Receber o processo<small>Trocar o localizador</small></span></a></li>
         <li data-etapa="2"><a class="tl" href="#etapa-2" data-alvo="etapa-2"><span class="tl-num"><span>2</span></span><span>Minutar<small>Despacho ou relatório/voto</small></span></a>
           <ul class="sub"><li><a href="#etapa-2a">A · Despacho, decisão, sentença</a></li><li><a href="#etapa-2b">B · Relatório/voto</a></li></ul></li>
@@ -57,36 +57,17 @@
 
     <main id="conteudo">
       <div class="wrap">
-<section id="comece-aqui" data-spy>
-  <div class="hero">
-    <h1>Do processo que chega ao evento 12311, em 4 etapas</h1>
-    <p>Este manual mostra, passo a passo, as rotinas do Gabinete da 1ª Relatoria no eproc: como receber o processo, incluir a minuta, entender a conferência e a pauta, e encerrar a conclusão.</p>
-    <p>O texto explica <strong>o que fazer e por quê</strong>. Os vídeos curtos, sem narração, mostram <strong>onde clicar</strong>.</p>
-    <a class="cta" href="#etapa-1">Começar pela Etapa 1 ›</a>
-  </div>
+<section id="fluxo" data-spy>
+  <h1>O fluxo do gabinete</h1>
+  <p class="lead">Do processo que chega ao evento que encerra a conclusão, em 4 etapas. O texto explica <strong>o que fazer e por quê</strong>; os vídeos curtos, sem narração, mostram <strong>onde clicar</strong>. Na Etapa 2 há um “ou”: escolha <strong>A</strong> ou <strong>B</strong> conforme o tipo da minuta.</p>
 
-  <h2>O fluxo do gabinete</h2>
   <ol class="fluxo">
     <li data-etapa="1"><a href="#etapa-1"><span class="n">1</span><b>Receber o processo</b>Trocar o localizador de entrada pelo seu.<span class="quem">Assessor, estagiário ou residente</span></a></li>
     <li data-etapa="2"><a href="#etapa-2"><span class="n">2</span><b>Minutar</b>Incluir a minuta no sistema e encaminhá-la.<span class="fork"><em>A</em> despacho, decisão, sentença · <em>B</em> relatório/voto</span><span class="quem">Assessor, estagiário ou residente</span></a></li>
     <li data-etapa="3"><a href="#etapa-3"><span class="n">3</span><b>Conferir e pautar</b>Assinatura, conferência e inclusão em pauta.<span class="quem">Dra. Vanessa</span></a></li>
     <li data-etapa="4"><a href="#etapa-4"><span class="n">4</span><b>Lançar o evento 12311</b>“Análise de Relator Concluída”, para encerrar a conclusão.<span class="quem">Equipe do gabinete</span></a></li>
   </ol>
-
-  <div class="cards">
-    <div class="card"><h3>Siga na ordem</h3><p>Cada etapa tem a sua cor e o seu número. A cor ajuda a se localizar, mas o número e o título sempre vêm junto. Na Etapa 2 há um “ou”: escolha <strong>A</strong> ou <strong>B</strong> conforme o tipo da minuta.</p></div>
-    <div class="card"><h3>Só quer confirmar algo?</h3><p>Use a <strong>busca</strong> no topo ou vá direto à <a href="#referencia">Referência rápida</a>, aos <a href="#secretaria">Localizadores da Secretaria</a> ou aos <a href="#erros">Erros comuns</a>.</p></div>
-    <div class="card"><h3>Marque o que já fez</h3><p>Em cada passo há a caixa <strong>Feito</strong>. O progresso fica salvo neste navegador e aparece no painel ao lado. O <strong>Modo foco</strong>, no topo, esmaece os outros passos.</p></div>
-  </div>
-
-  <h3>Como ler as caixas e os nomes</h3>
-  <p>Nomes de botões, campos e opções aparecem exatamente como na tela, em destaque: <span class="ui">Status destino</span> → <span class="ui">Rascunho</span>. Caminhos aparecem com setas: <span class="path">Processo<span class="sep">›</span>Minutas<span class="sep">›</span>Nova</span>. Atalhos de teclado aparecem assim: <span class="key">Alt+R</span>.</p>
-  <div class="callout dica"><span class="ico" aria-hidden="true">i</span><div><span class="tit">Dica</span><p>Atalho ou forma mais rápida de fazer algo.</p></div></div><div class="callout atencao"><span class="ico" aria-hidden="true">!</span><div><span class="tit">Atenção</span><p>Erro fácil de cometer, ou algo que faz o sistema não responder como esperado.</p></div></div><div class="callout regra"><span class="ico" aria-hidden="true">§</span><div><span class="tit">Regra do gabinete</span><p>Convenção interna do gabinete, que não é exigência do sistema.</p></div></div><div class="callout resultado"><span class="ico" aria-hidden="true">✓</span><div><span class="tit">Resultado esperado</span><p>Como saber que o passo deu certo.</p></div></div>
-
-  <div class="callout dica"><span class="ico" aria-hidden="true">i</span><div><span class="tit">Sobre os vídeos e as telas</span>
-    <p>Os vídeos e as telas do manual vêm do <strong>ambiente de treinamento</strong> do eproc, com dados fictícios. Onde o vídeo ainda não está pronto, há um espaço reservado, e o texto do passo já traz todos os cliques.</p></div></div>
-  <p class="rev">Seção revisada em 21/10/2026.</p>
-</section>
+  </section>
 <section class="etapa" id="etapa-1" data-etapa="1" data-spy>
   <header class="etapa-head">
     <span class="etapa-num" aria-hidden="true">1</span>
