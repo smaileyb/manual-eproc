@@ -1,6 +1,6 @@
 # Manual do Gabinete — eproc
 
-Manual de consulta rápida das rotinas do Gabinete da 1ª Relatoria da 1ª Turma Recursal dos Juizados Especiais (TJPR) no eproc: receber o processo, minutar, conferir e pautar, lançar o evento 12311.
+Manual de consulta rápida das rotinas do Gabinete da 1ª Relatoria da 1ª Turma Recursal dos Juizados Especiais (TJPR) no eproc: receber o processo, minutar, conferir e pautar, lançar o evento “Análise de Relator Concluída” (12311).
 
 Material de apoio, com telas do ambiente de treinamento (dados fictícios). Não é documento oficial do tribunal.
 

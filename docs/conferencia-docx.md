@@ -13,7 +13,7 @@ O conteúdo do manual parte do documento do gabinete, *Fluxo de trabalho – Epr
 | Etapa 3: Dra. Vanessa assina e confere; ícone ✓ verde (figura) | Etapa 3, passos 1 e 2 |
 | Etapa 3: martelo e ícone de três pessoas em fundo preto | Etapa 3, passo 3 |
 | Etapa 3: ajuste de localizadores (remover os anteriores, localizador da pauta e SEC – Incluído em Pauta; figura) | Etapa 3, passo 4 |
-| Etapa 4: evento 12311, localizador da pauta, botão Movimentar, campo Evento a ser lançado, nenhum campo marcado, lote | Etapa 4, passos 1 a 3 |
+| Etapa 4: evento “Decisão/Despacho – Análise de Relator Concluída” (12311), localizador da pauta, botão Movimentar, campo Evento a ser lançado, nenhum campo marcado, lote | Etapa 4, passos 1 a 3 |
 | Tabela de localizadores da Secretaria (10 linhas) | `#secretaria` |
 
 ## Acréscimos que não vêm do documento
