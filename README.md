@@ -15,7 +15,7 @@ Para os vídeos aparecerem, copie os MP4 para a pasta `videos/` (eles ficam fora
 ```
 index.html            conteúdo (uma seção por etapa)
 css/                  tokens (cores), base, layout, componentes, impressão
-js/manual.js          progresso, modo foco, busca, filtro, gaveta no celular
+js/manual.js          rodapé dos passos, destaque da seção atual, filtro da tabela, gaveta no celular, impressão
 assets/img/           imagens do documento do gabinete
 assets/fonts/         Inter (local, licença OFL)
 videos/               clipes MP4 (não versionados) e quadros de capa

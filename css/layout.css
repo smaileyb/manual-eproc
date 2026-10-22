@@ -35,11 +35,6 @@
   padding: 24px 18px 40px 22px;
 }
 .side h2 { font-size: .75rem; letter-spacing: .09em; text-transform: uppercase; color: var(--muted); margin: 0 0 12px; font-weight: 700; }
-.side-progress { background: var(--surface); border-radius: var(--radius); box-shadow: var(--shadow); padding: 14px 16px; margin-bottom: 22px; }
-.side-progress p { margin: 0 0 8px; font-size: .86rem; color: var(--ink-soft); font-weight: 600; display: flex; justify-content: space-between; }
-.meter { height: 8px; background: var(--surface-2); border-radius: 99px; overflow: hidden; }
-.meter > span { display: block; height: 100%; width: 0; background: var(--eproc-yellow); border-radius: 99px; transition: width .35s ease; }
-
 .timeline { list-style: none; padding: 0; margin: 0 0 26px; position: relative; }
 .timeline::before { content: ""; position: absolute; left: 17px; top: 18px; bottom: 18px; width: 2px; background: var(--line); }
 .timeline > li { position: relative; margin: 0 0 4px; }
@@ -61,9 +56,6 @@
 .timeline li[data-etapa="0"] { --c: var(--eproc-petrol); --cbg: var(--surface-2); }
 .timeline li.ativo a.tl { color: var(--ink); background: var(--cbg); }
 .timeline li.ativo .tl-num { background: var(--c); border-color: var(--c); color: #fff; }
-.timeline li.completa .tl-num { background: var(--cbg); border-color: var(--c); color: var(--c); }
-.timeline li.completa .tl-num::after { content: "✓"; }
-.timeline li.completa .tl-num > span { display: none; }
 .sub { list-style: none; margin: 2px 0 6px 48px; padding: 0; }
 .sub a { display: block; padding: 4px 8px; font-size: .88rem; color: var(--muted); text-decoration: none; border-radius: 6px; font-weight: 500; }
 .sub a:hover { color: var(--ink); background: rgba(0,86,128,.06); }
