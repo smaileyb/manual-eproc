@@ -14,24 +14,6 @@
 .brand-text strong { display: block; font-size: 1rem; }
 .brand-text span { font-size: .78rem; opacity: .8; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; display: block; }
 .topbar-tools { margin-left: auto; display: flex; align-items: center; gap: 10px; }
-.search { position: relative; }
-.search input {
-  width: min(280px, 34vw); height: 38px;
-  border: 0; border-radius: 10px; padding: 0 12px 0 36px;
-  font: inherit; font-size: .95rem; color: var(--ink); background: #fff;
-}
-.search::before { content: ""; position: absolute; left: 11px; top: 50%; width: 14px; height: 14px; margin-top: -9px; border: 2px solid var(--muted); border-radius: 50%; }
-.search::after { content: ""; position: absolute; left: 24px; top: 24px; width: 7px; height: 2px; background: var(--muted); transform: rotate(45deg); }
-.search-results {
-  position: absolute; right: 0; top: 46px; width: min(420px, 92vw); max-height: 60vh; overflow: auto;
-  background: #fff; color: var(--ink); border-radius: var(--radius); box-shadow: var(--shadow-pop); padding: 6px; list-style: none; margin: 0;
-}
-.search-results[hidden] { display: none; }
-.search-results li { margin: 0; }
-.search-results a { display: block; padding: 10px 12px; border-radius: 8px; text-decoration: none; color: var(--ink); }
-.search-results a:hover, .search-results a:focus { background: var(--surface-2); }
-.search-results small { display: block; color: var(--muted); }
-.search-results .vazio { padding: 12px; color: var(--muted); }
 .tool-btn {
   height: 38px; padding: 0 12px; border-radius: 10px; border: 1px solid rgba(255,255,255,.35);
   background: transparent; color: #fff; font: inherit; font-size: .9rem; font-weight: 600; cursor: pointer;
@@ -133,10 +115,6 @@ main { padding: 28px 28px 80px 12px; min-width: 0; }
 @media (max-width: 560px) {
   body { font-size: 16.5px; }
   .tool-btn .lbl { display: none; }
-  .brand-text { display: none; }
-  .topbar-tools { flex: 1; min-width: 0; }
-  .search { flex: 1; min-width: 0; }
-  .search input { width: 100%; }
 }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }

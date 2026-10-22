@@ -180,8 +180,5 @@ tr.oculta { display: none; }
   .tabela tr + tr td:first-child { border-top: 8px solid var(--bg); }
 }
 
-/* resultado de busca: realce breve do trecho encontrado */
-.achado { animation: achado 2.2s ease; }
-@keyframes achado { 0%, 70% { outline: 4px solid var(--eproc-yellow); outline-offset: 4px; } 100% { outline: 4px solid transparent; outline-offset: 4px; } }
 .clipe .slot code { background: rgba(255,255,255,.12); padding: 0 6px; border-radius: 4px; }
 @media (max-width: 560px) { .hero::after { display: none; } }

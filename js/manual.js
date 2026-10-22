@@ -127,66 +127,11 @@
   function gaveta(on) { document.body.classList.toggle("drawer-open", on); menuBtn.setAttribute("aria-expanded", String(on)); }
   menuBtn.addEventListener("click", function () { gaveta(!document.body.classList.contains("drawer-open")); });
   $$("#lateral a").forEach(function (a) { a.addEventListener("click", function () { gaveta(false); }); });
-  document.addEventListener("keydown", function (e) { if (e.key === "Escape") { gaveta(false); fecharBusca(); } });
+  document.addEventListener("keydown", function (e) { if (e.key === "Escape") gaveta(false); });
   document.addEventListener("click", function (e) { if (document.body.classList.contains("drawer-open") && !e.target.closest("#lateral, #menu-btn")) gaveta(false); });
 
-  /* ---------- busca ---------- */
-  function norm(t) { return (t || "").toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/\s+/g, " ").trim(); }
-  var indice = [], seq = 0;
-  function nomeSecao(el) { var s = el.closest("[data-busca-sec]"); return s ? s.getAttribute("data-busca-sec") : ""; }
-  function add(el, rotulo, soTitulo) {
-    if (!el.id) el.id = "b-" + (++seq);
-    indice.push({ el: el, rotulo: rotulo.trim(), secao: nomeSecao(el), texto: norm(rotulo + (soTitulo ? "" : " " + el.textContent)) });
-  }
-  $$(".passo").forEach(function (p) { add(p, ($("h3", p) || p).textContent); });
-  $$("section[data-busca-sec]").forEach(function (s) { var h = $("h1,h2", s); if (h) add(s, h.textContent, true); });
-  $$(".ramo").forEach(function (r) { add(r, $("h3", r).textContent); });
-  $$("details.sanfona").forEach(function (d) { add(d, $("summary", d).textContent); });
-  $$("tr[data-busca]").forEach(function (r) { add(r, r.cells[0].textContent); });
-  $$("dt[data-busca]").forEach(function (d) { add(d, d.textContent); });
-
-  var campo = $("#busca"), lista = $("#busca-res");
-  function fecharBusca() { lista.hidden = true; }
-  function buscar() {
-    var q = norm(campo.value);
-    if (q.length < 2) { fecharBusca(); return; }
-    var termos = q.split(" ");
-    var achados = indice.filter(function (it) { return termos.every(function (t) { return it.texto.indexOf(t) !== -1; }); });
-    // prefere resultados mais específicos (título contém o termo)
-    achados.sort(function (a, b) {
-      var sa = termos.every(function (t) { return norm(a.rotulo).indexOf(t) !== -1; }) ? 0 : 1;
-      var sb = termos.every(function (t) { return norm(b.rotulo).indexOf(t) !== -1; }) ? 0 : 1;
-      return sa - sb;
-    });
-    lista.innerHTML = "";
-    if (!achados.length) { var v = document.createElement("li"); v.className = "vazio"; v.textContent = "Nada encontrado. Tente outra palavra."; lista.appendChild(v); }
-    achados.slice(0, 8).forEach(function (it) {
-      var li = document.createElement("li"), a = document.createElement("a");
-      a.href = "#" + it.el.id;
-      var b = document.createElement("strong"); b.textContent = it.rotulo.length > 80 ? it.rotulo.slice(0, 77) + "…" : it.rotulo;
-      var s = document.createElement("small"); s.textContent = it.secao;
-      a.appendChild(b); a.appendChild(s); li.appendChild(a); lista.appendChild(li);
-      a.addEventListener("click", function (ev) { ev.preventDefault(); irPara(it.el); fecharBusca(); });
-    });
-    lista.hidden = false;
-  }
-  function irPara(el) {
-    var d = el.closest ? el.closest("details") : null;
-    while (d) { d.open = true; d = d.parentElement ? d.parentElement.closest("details") : null; }
-    if (el.tagName === "DETAILS") el.open = true;
-    el.scrollIntoView({ behavior: "smooth", block: "center" });
-    el.classList.add("achado");
-    setTimeout(function () { el.classList.remove("achado"); }, 2200);
-  }
-  campo.addEventListener("input", buscar);
-  campo.addEventListener("focus", buscar);
-  campo.addEventListener("keydown", function (e) {
-    if (e.key === "Enter") { var a = $("a", lista); if (a) a.click(); }
-    if (e.key === "ArrowDown") { var f = $("a", lista); if (f) { e.preventDefault(); f.focus(); } }
-  });
-  document.addEventListener("click", function (e) { if (!e.target.closest(".search")) fecharBusca(); });
-
   /* ---------- filtro da tabela da Secretaria ---------- */
+  function norm(t) { return (t || "").toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/\s+/g, " ").trim(); }
   var filtro = $("#filtro-sec");
   if (filtro) {
     var linhas = $$("#tab-sec tbody tr"), cont = $("#filtro-sec-n");

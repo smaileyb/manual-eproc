@@ -3,7 +3,7 @@
 @media print {
   html { scroll-behavior: auto; }
   body { background: #fff; font-size: 10.5pt; line-height: 1.5; color: #000; }
-  .topbar, .side, .stepper-bar, .skip, .passo-foot, .search, .filtro, .hero .cta, .escolha .ou { display: none !important; }
+  .topbar, .side, .stepper-bar, .skip, .passo-foot, .filtro, .hero .cta, .escolha .ou { display: none !important; }
   .shell { display: block; max-width: none; }
   main { padding: 0; }
   .wrap { max-width: none; }

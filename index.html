@@ -22,11 +22,6 @@
       <span class="brand-text"><strong>Manual do Gabinete</strong><span>1ª Relatoria · 1ª Turma Recursal · eproc</span></span>
     </a>
     <div class="topbar-tools">
-      <div class="search" role="search">
-        <label class="sr-only" for="busca">Buscar no manual</label>
-        <input id="busca" type="search" placeholder="Buscar: localizador, 12311, voto…" autocomplete="off">
-        <ul class="search-results" id="busca-res" hidden></ul>
-      </div>
       <button class="tool-btn" id="foco-btn" aria-pressed="false" title="Destaca o passo que você está lendo e esmaece os demais">◎ <span class="lbl">Modo foco</span></button>
       <button class="tool-btn" id="print-btn" title="Imprimir ou salvar em PDF">⎙ <span class="lbl">Imprimir</span></button>
     </div>
@@ -67,7 +62,7 @@
 
     <main id="conteudo">
       <div class="wrap">
-<section id="comece-aqui" data-spy data-busca-sec="Comece aqui">
+<section id="comece-aqui" data-spy>
   <div class="hero">
     <h1>Do processo que chega ao evento 12311, em 4 etapas</h1>
     <p>Este manual mostra, passo a passo, as rotinas do Gabinete da 1ª Relatoria no eproc: como receber o processo, incluir a minuta, entender a conferência e a pauta, e encerrar a conclusão.</p>
@@ -97,7 +92,7 @@
     <p>Os vídeos e as telas do manual vêm do <strong>ambiente de treinamento</strong> do eproc, com dados fictícios. Onde o vídeo ainda não está pronto, há um espaço reservado, e o texto do passo já traz todos os cliques.</p></div></div>
   <p class="rev">Seção revisada em 21/10/2026.</p>
 </section>
-<section class="etapa" id="etapa-1" data-etapa="1" data-spy data-busca-sec="Etapa 1 · Receber o processo">
+<section class="etapa" id="etapa-1" data-etapa="1" data-spy>
   <header class="etapa-head">
     <span class="etapa-num" aria-hidden="true">1</span>
     <p class="kicker">Etapa 1 de 4</p>
@@ -149,7 +144,7 @@
   </div>
   <p class="rev">Seção revisada em 21/10/2026. Telas do ambiente de treinamento.</p>
 </section>
-<section class="etapa" id="etapa-2" data-etapa="2" data-spy data-busca-sec="Etapa 2 · Minutar">
+<section class="etapa" id="etapa-2" data-etapa="2" data-spy>
   <header class="etapa-head">
     <span class="etapa-num" aria-hidden="true">2</span>
     <p class="kicker">Etapa 2 de 4</p>
@@ -283,7 +278,7 @@
   </div>
   <p class="rev">Seção revisada em 21/10/2026. Telas do ambiente de treinamento.</p>
 </section>
-<section class="etapa" id="etapa-3" data-etapa="3" data-spy data-busca-sec="Etapa 3 · Conferir e pautar">
+<section class="etapa" id="etapa-3" data-etapa="3" data-spy>
   <header class="etapa-head">
     <span class="etapa-num" aria-hidden="true">3</span>
     <p class="kicker">Etapa 3 de 4</p>
@@ -350,7 +345,7 @@
   </div>
   <p class="rev">Seção revisada em 21/10/2026. Passos 1 e 2 conforme os manuais do curso, a validar no treinamento.</p>
 </section>
-<section class="etapa" id="etapa-4" data-etapa="4" data-spy data-busca-sec="Etapa 4 · Evento 12311">
+<section class="etapa" id="etapa-4" data-etapa="4" data-spy>
   <header class="etapa-head">
     <span class="etapa-num" aria-hidden="true">4</span>
     <p class="kicker">Etapa 4 de 4</p>
@@ -401,16 +396,16 @@
   </div>
   <p class="rev">Seção revisada em 21/10/2026. Telas do ambiente de treinamento.</p>
 </section>
-<section class="sec-title" id="secretaria" data-spy data-busca-sec="Localizadores da Secretaria">
+<section class="sec-title" id="secretaria" data-spy>
   <p class="kicker">Consulta rápida</p>
   <h2>Localizadores da Secretaria</h2>
   <p>Quando a minuta pede alguma providência da Secretaria, o processo recebe o localizador correspondente. Procure pela situação, ou filtre a tabela.</p>
   <div class="filtro"><label class="sr-only" for="filtro-sec">Filtrar localizadores</label><input id="filtro-sec" type="search" placeholder="Filtrar: ofício, arquivo, pauta…" autocomplete="off"><span id="filtro-sec-n" class="mini" aria-live="polite"></span></div>
-  <div class="tabela-wrap"><table class="tabela" id="tab-sec"><thead><tr><th scope="col">Localizador</th><th scope="col">Quando utilizar</th></tr></thead><tbody><tr data-busca="1"><td>SEC – Decurso de prazo – Conclusão</td><td>Utilizar quando a minuta corresponder a despacho ou decisão interlocutória com intimação eletrônica já expedida (configurada no momento de elaboração da minuta). O gabinete remeterá os autos à Secretaria para monitorar eventual manifestação das partes ou o decurso do prazo e, oportunamente, encaminhá-los novamente à conclusão para nova deliberação.<br><strong>Atenção:</strong> para decisões que encerrem a prestação jurisdicional em grau recursal, utilizar o localizador “SEC – Decurso de prazo – Baixa/Arquivo”.</td></tr><tr data-busca="1"><td>SEC – Decurso de prazo – Baixa/Arquivo</td><td>Utilizar quando a minuta corresponder a decisão ou acórdão que encerre a tramitação do recurso na Turma Recursal. Este localizador sinaliza à Secretaria que, inexistindo novo expediente recursal, o processo estará apto à baixa definitiva.</td></tr><tr data-busca="1"><td>SEC – Decurso de prazo – Comunicação MP</td><td>Utilizar quando a minuta determina que, após o decurso de prazo ou manifestação das partes, os autos sejam remetidos pela Secretaria ao Ministério Público nos processos em que este atua como <em>custos iuris</em>.</td></tr><tr data-busca="1"><td>SEC – Devolução de Conclusão – Conclusão ao Relator</td><td>Utilizar quando o(a) magistrado(a) entende que há vinculação de outro(a) relator(a) ao feito, de modo que os autos devem retornar à Secretaria para que esta faça a conclusão dos autos ao relator(a) vinculado(a).</td></tr><tr data-busca="1"><td>SEC – Condenação em custas finais</td><td>Utilizar quando há condenação em custas finais em processos de Mandado de Segurança e Agravo de Instrumento. Nesses casos, não é permitido o parcelamento dentro do sistema.</td></tr><tr data-busca="1"><td>SEC – Expedir Mensageiro</td><td>Utilizar quando a minuta determina que sejam prestadas ou solicitadas informações a setores do próprio TJPR.</td></tr><tr data-busca="1"><td>SEC – Expedir Ofício</td><td>Utilizar quando a minuta determina a expedição de ofício.</td></tr><tr data-busca="1"><td>SEC – Redistribuir</td><td>Utilizar quando a minuta determina a redistribuição do processo.</td></tr><tr data-busca="1"><td>SEC – Retificar Autuação</td><td>Utilizar quando os autos demandarem retificação complexa que não puder ser feita pelo próprio gabinete.</td></tr><tr data-busca="1"><td>SEC – Incluído em Pauta</td><td>O processo deve ser incluído em pauta pelo gabinete. O localizador serve para organização e acompanhamento da Secretaria.</td></tr></tbody></table></div>
+  <div class="tabela-wrap"><table class="tabela" id="tab-sec"><thead><tr><th scope="col">Localizador</th><th scope="col">Quando utilizar</th></tr></thead><tbody><tr><td>SEC – Decurso de prazo – Conclusão</td><td>Utilizar quando a minuta corresponder a despacho ou decisão interlocutória com intimação eletrônica já expedida (configurada no momento de elaboração da minuta). O gabinete remeterá os autos à Secretaria para monitorar eventual manifestação das partes ou o decurso do prazo e, oportunamente, encaminhá-los novamente à conclusão para nova deliberação.<br><strong>Atenção:</strong> para decisões que encerrem a prestação jurisdicional em grau recursal, utilizar o localizador “SEC – Decurso de prazo – Baixa/Arquivo”.</td></tr><tr><td>SEC – Decurso de prazo – Baixa/Arquivo</td><td>Utilizar quando a minuta corresponder a decisão ou acórdão que encerre a tramitação do recurso na Turma Recursal. Este localizador sinaliza à Secretaria que, inexistindo novo expediente recursal, o processo estará apto à baixa definitiva.</td></tr><tr><td>SEC – Decurso de prazo – Comunicação MP</td><td>Utilizar quando a minuta determina que, após o decurso de prazo ou manifestação das partes, os autos sejam remetidos pela Secretaria ao Ministério Público nos processos em que este atua como <em>custos iuris</em>.</td></tr><tr><td>SEC – Devolução de Conclusão – Conclusão ao Relator</td><td>Utilizar quando o(a) magistrado(a) entende que há vinculação de outro(a) relator(a) ao feito, de modo que os autos devem retornar à Secretaria para que esta faça a conclusão dos autos ao relator(a) vinculado(a).</td></tr><tr><td>SEC – Condenação em custas finais</td><td>Utilizar quando há condenação em custas finais em processos de Mandado de Segurança e Agravo de Instrumento. Nesses casos, não é permitido o parcelamento dentro do sistema.</td></tr><tr><td>SEC – Expedir Mensageiro</td><td>Utilizar quando a minuta determina que sejam prestadas ou solicitadas informações a setores do próprio TJPR.</td></tr><tr><td>SEC – Expedir Ofício</td><td>Utilizar quando a minuta determina a expedição de ofício.</td></tr><tr><td>SEC – Redistribuir</td><td>Utilizar quando a minuta determina a redistribuição do processo.</td></tr><tr><td>SEC – Retificar Autuação</td><td>Utilizar quando os autos demandarem retificação complexa que não puder ser feita pelo próprio gabinete.</td></tr><tr><td>SEC – Incluído em Pauta</td><td>O processo deve ser incluído em pauta pelo gabinete. O localizador serve para organização e acompanhamento da Secretaria.</td></tr></tbody></table></div>
   <div class="callout regra"><span class="ico" aria-hidden="true">§</span><div><span class="tit">Regra do gabinete</span><p>Nos despachos e decisões, o localizador da Secretaria vem na preferência e entra depois da assinatura. Nos votos, a troca é programada na inclusão em pauta e só se efetiva quando a sessão fecha e as intimações são disparadas.</p></div></div>
   <p class="rev">Tabela conforme o documento do gabinete. Seção revisada em 21/10/2026.</p>
 </section>
-<section class="sec-title" id="referencia" data-spy data-busca-sec="Referência rápida">
+<section class="sec-title" id="referencia" data-spy>
   <p class="kicker">Consulta rápida</p>
   <h2>Referência rápida</h2>
   <p>Para quem só quer confirmar um detalhe.</p>
@@ -418,18 +413,18 @@
   <details class="sanfona" open><summary>Qual tipo de minuta vai para onde?</summary><div class="corpo"><div class="tabela-wrap"><table class="tabela">
     <thead><tr><th scope="col">Tipo</th><th scope="col">Tratamento</th><th scope="col">Encaminhar para</th><th scope="col">Status na capa</th></tr></thead>
     <tbody>
-      <tr data-busca="1"><td>A · Despacho, decisão, sentença, decisão monocrática</td><td><span class="ui">Juíza de Direito</span></td><td><span class="ui">Encaminhar minuta para assinatura</span></td><td>Para assinar</td></tr>
-      <tr data-busca="1"><td>B · Relatório/voto (e acórdão)</td><td><span class="ui">Juíza Relatora</span></td><td><span class="ui">Encaminhar minuta para conferência</span></td><td>Para conferir</td></tr>
+      <tr><td>A · Despacho, decisão, sentença, decisão monocrática</td><td><span class="ui">Juíza de Direito</span></td><td><span class="ui">Encaminhar minuta para assinatura</span></td><td>Para assinar</td></tr>
+      <tr><td>B · Relatório/voto (e acórdão)</td><td><span class="ui">Juíza Relatora</span></td><td><span class="ui">Encaminhar minuta para conferência</span></td><td>Para conferir</td></tr>
     </tbody></table></div>
     <p class="mini" style="margin-top:10px">Nos dois tipos: <span class="ui">Texto Padrão</span> marcado e <span class="ui">Status destino</span> = <span class="ui">Rascunho</span>.</p></div></details>
 
   <details class="sanfona"><summary>Localizadores do gabinete</summary><div class="corpo"><div class="tabela-wrap"><table class="tabela">
     <thead><tr><th scope="col">Localizador</th><th scope="col">Para que serve</th></tr></thead>
     <tbody>
-      <tr data-busca="1"><td>1ª Relatoria – Concluso – Despacho/Decisão</td><td>Entrada: onde os processos chegam. Sai daqui quando você assume o processo (Etapa 1).</td></tr>
-      <tr data-busca="1"><td>1TRVB – [nome]</td><td>Localizador individual de quem assumiu o processo.</td></tr>
-      <tr data-busca="1"><td>1TRVB – Pautado dd/mm</td><td>Localizador interno da pauta (ex.: 1TRVB – Pautado 09/11). É nele que se busca os processos para lançar o evento 12311 (Etapa 4).</td></tr>
-      <tr data-busca="1"><td>SEC – Incluído em Pauta</td><td>Acompanhamento da Secretaria; entra junto com o localizador da pauta (Etapa 3).</td></tr>
+      <tr><td>1ª Relatoria – Concluso – Despacho/Decisão</td><td>Entrada: onde os processos chegam. Sai daqui quando você assume o processo (Etapa 1).</td></tr>
+      <tr><td>1TRVB – [nome]</td><td>Localizador individual de quem assumiu o processo.</td></tr>
+      <tr><td>1TRVB – Pautado dd/mm</td><td>Localizador interno da pauta (ex.: 1TRVB – Pautado 09/11). É nele que se busca os processos para lançar o evento 12311 (Etapa 4).</td></tr>
+      <tr><td>SEC – Incluído em Pauta</td><td>Acompanhamento da Secretaria; entra junto com o localizador da pauta (Etapa 3).</td></tr>
     </tbody></table></div>
     <p class="mini" style="margin-top:10px">Os demais localizadores da Secretaria estão na <a href="#secretaria">tabela própria</a>.</p></div></details>
 
@@ -455,31 +450,31 @@
   <details class="sanfona"><summary>Atalhos do editor <span class="badge compl">Do manual do curso</span></summary><div class="corpo"><div class="tabela-wrap"><table class="tabela">
     <thead><tr><th scope="col">Atalho</th><th scope="col">Uso</th></tr></thead>
     <tbody>
-      <tr data-busca="1"><td><span class="key">Alt+R</span></td><td>Resumo (trecho que aparece na coluna Documentos da tabela de eventos).</td></tr>
-      <tr data-busca="1"><td><span class="key">Alt+5</span></td><td>Estilo citação.</td></tr>
-      <tr data-busca="1"><td><span class="key">Alt+1</span></td><td>Estilo paragrafoPadrão (restante do texto).</td></tr>
-      <tr data-busca="1"><td><span class="key">Alt+8</span></td><td>Estilo caputEmenta (ementa do acórdão; obrigatório).</td></tr>
-      <tr data-busca="1"><td><span class="key">Alt+D</span></td><td>Dispositivo (sentença). <strong>Nunca no voto.</strong></td></tr>
+      <tr><td><span class="key">Alt+R</span></td><td>Resumo (trecho que aparece na coluna Documentos da tabela de eventos).</td></tr>
+      <tr><td><span class="key">Alt+5</span></td><td>Estilo citação.</td></tr>
+      <tr><td><span class="key">Alt+1</span></td><td>Estilo paragrafoPadrão (restante do texto).</td></tr>
+      <tr><td><span class="key">Alt+8</span></td><td>Estilo caputEmenta (ementa do acórdão; obrigatório).</td></tr>
+      <tr><td><span class="key">Alt+D</span></td><td>Dispositivo (sentença). <strong>Nunca no voto.</strong></td></tr>
     </tbody></table></div></div></details>
 
   <details class="sanfona"><summary>Evento 12311</summary><div class="corpo"><p><span class="ui">Decisão/Despacho – Análise de Relator Concluída (12311)</span>. Lançado em <span class="ui">Evento a ser lançado:</span>, na tela <em>Movimentação Processual</em>. Nenhum outro campo precisa ser marcado.</p></div></details>
   <p class="rev">Seção revisada em 21/10/2026.</p>
 </section>
-<section class="sec-title" id="erros" data-spy data-busca-sec="Erros comuns">
+<section class="sec-title" id="erros" data-spy>
   <p class="kicker">Consulta rápida</p>
   <h2>Erros comuns e dúvidas</h2>
   <p>Travou? Procure o sintoma.</p>
   <div class="qa">
-    <details class="sanfona" data-busca="1"><summary>O editor de texto não abriu</summary><div class="corpo"><p><strong>Causa:</strong> o <span class="ui">Status destino</span> da minuta não estava em <span class="ui">Rascunho</span>.</p><p><strong>Solução:</strong> inclua a minuta de novo com <span class="ui">Rascunho</span> (Etapa 2, passo de status destino). Se o editor ainda não aparecer, libere os <strong>pop-ups</strong> do navegador: ele abre em outra aba.</p></div></details>
-    <details class="sanfona" data-busca="1"><summary>O campo “Texto Inicial 2” não apareceu</summary><div class="corpo"><p><strong>Causa:</strong> o campo é criado pelo sistema quando se escolhe, em <span class="ui">Tipo de documento/Modelo</span>, a opção <span class="ui">***Relatório/Voto***</span>.</p><p><strong>Solução:</strong> escolha esse modelo; então defina o novo campo como <span class="ui">***Acórdão***</span> (<a href="#e2b-p1">Etapa 2B, passo 1</a>).</p></div></details>
-    <details class="sanfona" data-busca="1"><summary>Escrevi algo depois do “voto por…”</summary><div class="corpo"><p><strong>Causa:</strong> a última coisa do voto deve ser o fecho “voto por + verbo no infinitivo + complemento”; aparentemente nada pode constar depois, nem a fixação da sucumbência.</p><p><strong>Solução:</strong> mova a sucumbência para antes do fecho, como no modelo do gabinete (<a href="#e2b-p4">Etapa 2B, passo 4</a>).</p></div></details>
-    <details class="sanfona" data-busca="1"><summary>Não acho onde encaminhar a minuta para assinatura ou conferência</summary><div class="corpo"><p>Fica no <strong>canto superior esquerdo</strong> do editor, perto do disquete com a seta verde. Marque a opção desejada e só então clique no disquete (<em>salvar e sair</em>).</p></div></details>
-    <details class="sanfona" data-busca="1"><summary>Incluí o processo em pauta, mas os localizadores não mudaram</summary><div class="corpo"><p>Nos votos, a troca de localizadores só se efetiva quando a sessão fecha e as intimações são disparadas (<a href="#e3-p4">Etapa 3, passo 4</a>).</p></div></details>
-    <details class="sanfona" data-busca="1"><summary>Marquei o Dispositivo (Alt+D) no voto</summary><div class="corpo"><p>O dispositivo é para sentença: <strong>nunca no voto</strong>. Remova a marcação.</p></div></details>
+    <details class="sanfona"><summary>O editor de texto não abriu</summary><div class="corpo"><p><strong>Causa:</strong> o <span class="ui">Status destino</span> da minuta não estava em <span class="ui">Rascunho</span>.</p><p><strong>Solução:</strong> inclua a minuta de novo com <span class="ui">Rascunho</span> (Etapa 2, passo de status destino). Se o editor ainda não aparecer, libere os <strong>pop-ups</strong> do navegador: ele abre em outra aba.</p></div></details>
+    <details class="sanfona"><summary>O campo “Texto Inicial 2” não apareceu</summary><div class="corpo"><p><strong>Causa:</strong> o campo é criado pelo sistema quando se escolhe, em <span class="ui">Tipo de documento/Modelo</span>, a opção <span class="ui">***Relatório/Voto***</span>.</p><p><strong>Solução:</strong> escolha esse modelo; então defina o novo campo como <span class="ui">***Acórdão***</span> (<a href="#e2b-p1">Etapa 2B, passo 1</a>).</p></div></details>
+    <details class="sanfona"><summary>Escrevi algo depois do “voto por…”</summary><div class="corpo"><p><strong>Causa:</strong> a última coisa do voto deve ser o fecho “voto por + verbo no infinitivo + complemento”; aparentemente nada pode constar depois, nem a fixação da sucumbência.</p><p><strong>Solução:</strong> mova a sucumbência para antes do fecho, como no modelo do gabinete (<a href="#e2b-p4">Etapa 2B, passo 4</a>).</p></div></details>
+    <details class="sanfona"><summary>Não acho onde encaminhar a minuta para assinatura ou conferência</summary><div class="corpo"><p>Fica no <strong>canto superior esquerdo</strong> do editor, perto do disquete com a seta verde. Marque a opção desejada e só então clique no disquete (<em>salvar e sair</em>).</p></div></details>
+    <details class="sanfona"><summary>Incluí o processo em pauta, mas os localizadores não mudaram</summary><div class="corpo"><p>Nos votos, a troca de localizadores só se efetiva quando a sessão fecha e as intimações são disparadas (<a href="#e3-p4">Etapa 3, passo 4</a>).</p></div></details>
+    <details class="sanfona"><summary>Marquei o Dispositivo (Alt+D) no voto</summary><div class="corpo"><p>O dispositivo é para sentença: <strong>nunca no voto</strong>. Remova a marcação.</p></div></details>
   </div>
   <p class="rev">Seção revisada em 21/10/2026. Novos erros entram aqui à medida que a equipe encontrar.</p>
 </section>
-<section class="sec-title" id="projudi" data-spy data-busca-sec="Projudi para eproc">
+<section class="sec-title" id="projudi" data-spy>
   <p class="kicker">Consulta rápida</p>
   <h2>Projudi → eproc</h2>
   <p>Equivalência de termos e telas para quem vem do sistema antigo.</p>
@@ -488,25 +483,25 @@
     <tr><td colspan="2" class="mini">Espaço reservado para as equivalências.</td></tr></tbody></table></div>
 </section>
 
-<section class="sec-title" id="glossario" data-spy data-busca-sec="Glossário">
+<section class="sec-title" id="glossario" data-spy>
   <p class="kicker">Consulta rápida</p>
   <h2>Glossário</h2>
   <dl class="qa">
-    <dt data-busca="1">Localizador</dt><dd>Marcador que indica onde o processo está dentro do gabinete ou da Secretaria. Trocar o localizador é a forma de “passar” o processo de uma fila para outra.</dd>
-    <dt data-busca="1">Localizador de entrada</dt><dd><span class="ui">1ª Relatoria – Concluso – Despacho/Decisão</span>: onde os processos chegam ao gabinete.</dd>
-    <dt data-busca="1">Localizador individual</dt><dd>O localizador próprio de cada assessor, estagiário ou residente: <span class="ui">1TRVB – [nome]</span>.</dd>
-    <dt data-busca="1">Minuta</dt><dd>O texto do despacho, decisão, sentença, relatório/voto ou acórdão, elaborado no editor do eproc.</dd>
-    <dt data-busca="1">Preferência de minuta</dt><dd>Modelo de minuta previamente salvo, com campos já definidos, que se escolhe ao abrir uma nova minuta. Pode-se pedir a geração de uma nova.</dd>
-    <dt data-busca="1">Status destino</dt><dd>O status em que a minuta é incluída. Precisa ser <span class="ui">Rascunho</span> para o editor abrir.</dd>
-    <dt data-busca="1">Tratamento</dt><dd>Campo que define a forma de tratamento do magistrado na minuta: <span class="ui">Juíza de Direito</span> (despachos e decisões) ou <span class="ui">Juíza Relatora</span> (voto).</dd>
-    <dt data-busca="1">Conferência</dt><dd>Revisão do voto pela juíza, que o marca como conferido (✓ verde) antes da pauta.</dd>
-    <dt data-busca="1">Pauta</dt><dd>Lista de processos da sessão de julgamento. O processo é incluído nela pelo gabinete (martelo).</dd>
-    <dt data-busca="1">Evento 12311</dt><dd>“Decisão/Despacho – Análise de Relator Concluída”, lançado para encerrar a conclusão ao relator.</dd>
-    <dt data-busca="1">Movimentar</dt><dd>Botão da capa do processo que abre a tela <em>Movimentação Processual</em>, onde se lança um evento.</dd>
+    <dt>Localizador</dt><dd>Marcador que indica onde o processo está dentro do gabinete ou da Secretaria. Trocar o localizador é a forma de “passar” o processo de uma fila para outra.</dd>
+    <dt>Localizador de entrada</dt><dd><span class="ui">1ª Relatoria – Concluso – Despacho/Decisão</span>: onde os processos chegam ao gabinete.</dd>
+    <dt>Localizador individual</dt><dd>O localizador próprio de cada assessor, estagiário ou residente: <span class="ui">1TRVB – [nome]</span>.</dd>
+    <dt>Minuta</dt><dd>O texto do despacho, decisão, sentença, relatório/voto ou acórdão, elaborado no editor do eproc.</dd>
+    <dt>Preferência de minuta</dt><dd>Modelo de minuta previamente salvo, com campos já definidos, que se escolhe ao abrir uma nova minuta. Pode-se pedir a geração de uma nova.</dd>
+    <dt>Status destino</dt><dd>O status em que a minuta é incluída. Precisa ser <span class="ui">Rascunho</span> para o editor abrir.</dd>
+    <dt>Tratamento</dt><dd>Campo que define a forma de tratamento do magistrado na minuta: <span class="ui">Juíza de Direito</span> (despachos e decisões) ou <span class="ui">Juíza Relatora</span> (voto).</dd>
+    <dt>Conferência</dt><dd>Revisão do voto pela juíza, que o marca como conferido (✓ verde) antes da pauta.</dd>
+    <dt>Pauta</dt><dd>Lista de processos da sessão de julgamento. O processo é incluído nela pelo gabinete (martelo).</dd>
+    <dt>Evento 12311</dt><dd>“Decisão/Despacho – Análise de Relator Concluída”, lançado para encerrar a conclusão ao relator.</dd>
+    <dt>Movimentar</dt><dd>Botão da capa do processo que abre a tela <em>Movimentação Processual</em>, onde se lança um evento.</dd>
   </dl>
 </section>
 
-<section class="sec-title" id="revisoes" data-spy data-busca-sec="Histórico de revisões">
+<section class="sec-title" id="revisoes" data-spy>
   <p class="kicker">Consulta rápida</p>
   <h2>Histórico de revisões</h2>
   <p>O eproc recebe atualizações com mudanças de tela. Cada seção mostra a data da sua última revisão; as mudanças ficam registradas aqui.</p>
