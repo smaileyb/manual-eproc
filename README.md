@@ -33,7 +33,7 @@ Cores do próprio eproc (cabeçalho petróleo, azul dos botões, amarelo dos íc
 
 ## Como atualizar uma seção
 
-Edite o texto em `index.html`, atualize a linha “Seção revisada em” e registre a mudança em “Histórico de revisões”.
+Edite o texto em `index.html`.
 
 ## Commits
 

@@ -127,10 +127,7 @@ details.sanfona > summary::-webkit-details-marker { display: none; }
 details.sanfona > summary::after { content: "+"; font-size: 1.5rem; line-height: 1; color: var(--eproc-blue); font-weight: 400; }
 details.sanfona[open] > summary::after { content: "–"; }
 details.sanfona > .corpo { padding: 0 20px 18px; }
-.qa dt { font-weight: 700; margin-top: 14px; }
-.qa dd { margin: 4px 0 0; color: var(--ink-soft); }
 .sec-title { margin-top: 56px; }
-.sec-title .kicker { font-size: .78rem; font-weight: 700; letter-spacing: .09em; text-transform: uppercase; color: var(--eproc-petrol); margin: 0 0 4px; }
 .rev { font-size: .85rem; color: var(--muted); margin: -4px 0 18px; }
 
 @media (max-width: 860px) {
