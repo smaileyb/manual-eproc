@@ -57,6 +57,35 @@
   document.addEventListener("keydown", function (e) { if (e.key === "Escape") gaveta(false); });
   document.addEventListener("click", function (e) { if (document.body.classList.contains("drawer-open") && !e.target.closest("#lateral, #menu-btn")) gaveta(false); });
 
+  /* ---------- tema claro/escuro: segue o sistema até a pessoa escolher ---------- */
+  var KEY_TEMA = "manual-eproc:tema";
+  function lsGet(k) { try { return localStorage.getItem(k); } catch (e) { return null; } }
+  function lsSet(k, v) { try { localStorage.setItem(k, v); } catch (e) { /* sem armazenamento: vale só nesta visita */ } }
+  var raiz = document.documentElement, temaBtn = $("#tema-btn"), corTema = $('meta[name="theme-color"]');
+  var sistemaEscuro = window.matchMedia("(prefers-color-scheme: dark)");
+  var reduzMov = window.matchMedia("(prefers-reduced-motion: reduce)");
+  function temaAtual() { return raiz.dataset.theme || (sistemaEscuro.matches ? "dark" : "light"); }
+  function mostrarTema() {
+    var escuro = temaAtual() === "dark";
+    $(".lbl", temaBtn).textContent = escuro ? "Tema claro" : "Tema escuro";
+    temaBtn.title = escuro ? "Mudar para o tema claro" : "Mudar para o tema escuro";
+    corTema.content = getComputedStyle(raiz).getPropertyValue("--paper").trim();
+  }
+  function aplicarTema(t, x, y) {
+    function trocar() { raiz.dataset.theme = t; lsSet(KEY_TEMA, t); mostrarTema(); }
+    if (!document.startViewTransition || reduzMov.matches) { trocar(); return; }
+    // o novo tema se abre em círculo a partir do botão
+    raiz.style.setProperty("--vt-x", x + "px");
+    raiz.style.setProperty("--vt-y", y + "px");
+    document.startViewTransition(trocar);
+  }
+  temaBtn.addEventListener("click", function () {
+    var r = temaBtn.getBoundingClientRect();
+    aplicarTema(temaAtual() === "dark" ? "light" : "dark", r.left + r.width / 2, r.top + r.height / 2);
+  });
+  sistemaEscuro.addEventListener("change", function () { if (!raiz.dataset.theme) mostrarTema(); });
+  mostrarTema();
+
   /* ---------- filtro da tabela da Secretaria ---------- */
   function norm(t) { return (t || "").toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/\s+/g, " ").trim(); }
   var filtro = $("#filtro-sec");

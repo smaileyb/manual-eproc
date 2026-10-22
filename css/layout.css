@@ -107,3 +107,20 @@ main { padding: 28px 28px 80px 12px; min-width: 0; }
   body { font-size: 16.5px; }
   .tool-btn .lbl { display: none; }
 }
+
+/* ---------- botão de tema: meio círculo que gira ao trocar ---------- */
+.tema-ico {
+  width: 16px; height: 16px; border-radius: 50%; border: 2px solid currentColor; flex: none;
+  background: linear-gradient(90deg, currentColor 50%, transparent 50%);
+  transition: transform var(--dur-3) var(--ease-out);
+}
+:root[data-theme="dark"] .tema-ico { transform: rotate(180deg); }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .tema-ico { transform: rotate(180deg); } }
+
+/* troca de tema: o novo tema se abre em círculo a partir do botão (View Transitions) */
+::view-transition-old(root), ::view-transition-new(root) { animation: none; mix-blend-mode: normal; }
+::view-transition-new(root) { animation: tema-revela 520ms var(--ease-in-out); }
+@keyframes tema-revela {
+  from { clip-path: circle(0 at var(--vt-x, 50%) var(--vt-y, 0)); }
+  to { clip-path: circle(150vmax at var(--vt-x, 50%) var(--vt-y, 0)); }
+}

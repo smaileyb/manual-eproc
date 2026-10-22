@@ -5,7 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Manual do Gabinete — eproc</title>
   <meta name="description" content="Passo a passo das rotinas do Gabinete da 1ª Relatoria da 1ª Turma Recursal no eproc: receber o processo, minutar, conferir e pautar, lançar o evento Análise de Relator Concluída (12311).">
-  <meta name="theme-color" content="#00405f">
+  <meta name="theme-color" content="#eef2f4">
+  <script>/* tema salvo antes de pintar a página, para não piscar */ try { var t = localStorage.getItem("manual-eproc:tema"); if (t === "light" || t === "dark") document.documentElement.dataset.theme = t; } catch (e) {}</script>
   <link rel="stylesheet" href="css/tokens.css">
   <link rel="stylesheet" href="css/base.css">
   <link rel="stylesheet" href="css/layout.css">
@@ -22,6 +23,7 @@
       <span class="brand-text"><strong>Manual do Gabinete</strong><span>1ª Relatoria · 1ª Turma Recursal · eproc</span></span>
     </div>
     <div class="topbar-tools">
+      <button class="tool-btn" id="tema-btn" type="button" title="Mudar para o tema escuro"><span class="tema-ico" aria-hidden="true"></span><span class="lbl">Tema escuro</span></button>
       <button class="tool-btn" id="print-btn" title="Imprimir ou salvar em PDF">⎙ <span class="lbl">Imprimir</span></button>
     </div>
   </header>
