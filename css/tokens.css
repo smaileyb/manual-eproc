@@ -161,26 +161,4 @@
 
   --header-h: 60px;
   --side-w: 300px;
-
-  /* nomes antigos, apontando para os novos, até o layout e os componentes serem refeitos */
-  --eproc-deep: var(--petrol);
-  --eproc-petrol: var(--petrol);
-  --eproc-blue: var(--link);
-  --eproc-yellow: var(--marker);
-  --line: var(--rule);
-  --bg: var(--paper);
-  --surface: var(--sheet);
-  --surface-2: var(--sheet-2);
-  --e1: var(--s1); --e1-bg: color-mix(in srgb, var(--s1) var(--tint), var(--sheet));
-  --e2: var(--s2); --e2-bg: color-mix(in srgb, var(--s2) var(--tint), var(--sheet));
-  --e3: var(--s3); --e3-bg: color-mix(in srgb, var(--s3) var(--tint), var(--sheet));
-  --e4: var(--s4); --e4-bg: color-mix(in srgb, var(--s4) var(--tint), var(--sheet));
-  --dica: var(--k-dica); --dica-bg: color-mix(in srgb, var(--k-dica) var(--tint), var(--sheet));
-  --atencao: var(--k-atencao); --atencao-bg: color-mix(in srgb, var(--k-atencao) var(--tint), var(--sheet));
-  --regra: var(--k-regra); --regra-bg: color-mix(in srgb, var(--k-regra) var(--tint), var(--sheet));
-  --resultado: var(--k-resultado); --resultado-bg: color-mix(in srgb, var(--k-resultado) var(--tint), var(--sheet));
-  --radius: var(--radius-sheet);
-  --radius-sm: 10px;
-  --shadow: 0 0 0 1px var(--rule);
-  --shadow-pop: 0 0 0 1px var(--rule-strong), 0 18px 40px -18px rgba(0, 0, 0, .35);
 }
