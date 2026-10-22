@@ -1,0 +1,10 @@
+# Finais de linha: LF no repositório e na pasta, como pede o .editorconfig,
+# mesmo com core.autocrlf=true no Windows. O .bat sai com CRLF para o cmd.exe.
+* text=auto eol=lf
+*.bat text eol=crlf
+
+*.png binary
+*.jpg binary
+*.woff2 binary
+*.mp4 binary
+*.webm binary
