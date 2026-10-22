@@ -18,7 +18,7 @@ O conteúdo do manual parte do documento do gabinete, *Fluxo de trabalho – Epr
 
 ## Acréscimos que não vêm do documento
 
-Marcados na página com o selo **Do manual do curso** ou **a confirmar** / **a validar**:
+Sem selos na página (retirados em 22/10/2026):
 
 - Atalhos e estilos do editor (Alt+R, Alt+5, Alt+1, Alt+8, Alt+D), nota de fim de texto, tópico ACÓRDÃO em branco e liberação de pop-ups: regras do gabinete e do curso registradas no plano do projeto.
 - Caminhos de menu para abrir a lista de processos (Etapa 1) e roteiro de assinatura, pauta e movimentação em lote (Etapas 3 e 4), vindos do plano e dos manuais do curso.

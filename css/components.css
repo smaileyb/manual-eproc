@@ -78,11 +78,6 @@ figcaption { font-size: .88rem; color: var(--muted); margin-top: 8px; }
 .clipe .slot em { font-style: normal; font-size: .72rem; letter-spacing: .08em; text-transform: uppercase; color: var(--eproc-yellow); font-weight: 800; }
 .clipe.provisorio .clipe-id::after { content: " · aguarda conferência"; font-weight: 600; color: var(--muted); }
 
-/* ---------- selos ---------- */
-.badge { display: inline-block; font-size: .72rem; font-weight: 800; letter-spacing: .05em; text-transform: uppercase; padding: 2px 8px; border-radius: 99px; vertical-align: middle; }
-.badge.confirmar { background: var(--atencao-bg); color: var(--atencao); border: 1px solid #e9c46a; }
-.badge.novo { background: var(--e3-bg); color: var(--e3); }
-
 /* ---------- bifurcação (A ou B) ---------- */
 .escolha { display: grid; grid-template-columns: 1fr auto 1fr; gap: 14px; align-items: stretch; margin: 6px 0 22px; }
 .escolha .ou { align-self: center; font-weight: 800; color: var(--muted); text-transform: uppercase; font-size: .8rem; letter-spacing: .1em; }
@@ -144,8 +139,6 @@ details.sanfona > .corpo { padding: 0 20px 18px; }
   .fluxo { grid-template-columns: 1fr; }
 }
 
-/* selo de conteúdo vindo do curso/plano, além do documento-base do gabinete */
-.badge.compl { background: var(--surface-2); color: var(--eproc-petrol); border: 1px solid var(--line); }
 .mini { font-size: .9rem; color: var(--ink-soft); }
 .icones img { image-rendering: auto; }
 
