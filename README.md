@@ -4,6 +4,8 @@ Manual de consulta rápida das rotinas do Gabinete da 1ª Relatoria da 1ª Turma
 
 Material de apoio, com telas do ambiente de treinamento (dados fictícios). Não é documento oficial do tribunal.
 
+**Online:** <https://smaileyb.github.io/manual-eproc/> (GitHub Pages, publicado a partir da `main`).
+
 ## Como abrir
 
 Página estática (HTML, CSS e JavaScript puros, sem build e sem internet): abra `index.html` no navegador.
