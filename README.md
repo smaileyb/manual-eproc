@@ -8,7 +8,7 @@ Material de apoio, com telas do ambiente de treinamento (dados fictícios). Não
 
 Página estática (HTML, CSS e JavaScript puros, sem build e sem internet): abra `index.html` no navegador.
 
-Para os vídeos aparecerem, copie os MP4 para a pasta `videos/` (eles ficam fora do git, ver `.gitignore`). Os nomes esperados estão no atributo `src` de cada clipe em `index.html`, por exemplo `videos/clipe_1C_trocar_localizador.mp4`.
+Os vídeos ficam em `videos/` e fazem parte do repositório, então tudo funciona direto do download.
 
 ## Estrutura
 
@@ -18,7 +18,7 @@ css/                  tokens (cores), base, layout, componentes, impressão
 js/manual.js          rodapé dos passos, trilho da seção atual, tema, transições, filtro, gaveta, impressão
 assets/img/           imagens do documento do gabinete
 assets/fonts/         Newsreader e Atkinson Hyperlegible (locais, licença OFL)
-videos/               clipes MP4 (não versionados) e quadros de capa
+videos/               clipes MP4 e quadros de capa
 docs/                 conferência contra o documento-base
 ```
 
@@ -34,7 +34,7 @@ O conceito é o **trilho**: o fluxo é uma sequência com uma bifurcação (A ou
 
 ## Como incluir um vídeo novo
 
-1. Salve o MP4 em `videos/` e um quadro de capa em `videos/posters/` (mesmo nome, `.jpg`).
+1. Salve o MP4 em `videos/` e um quadro de capa em `videos/posters/` (mesmo nome, `.jpg`). Os MP4 entram no git como binários; mantenha cada um abaixo de 50 MB.
 2. Em `index.html`, copie o bloco `<figure class="clipe">` de um clipe pronto (por exemplo, o do clipe 1C) para o ponto do passo e ajuste arquivo, capa, legenda e duração. O manual não mostra numeração de clipes nem espaços reservados: o que ainda falta gravar fica no plano do projeto (`../Plano.md`).
 
 ## Como atualizar uma seção

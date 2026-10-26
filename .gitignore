@@ -1,5 +1,2 @@
-# Vídeos pesados ficam fora do git; copie os MP4 para videos/ (ver README)
-videos/*.mp4
-videos/*.webm
 .DS_Store
 Thumbs.db
