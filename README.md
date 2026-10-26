@@ -35,7 +35,7 @@ O conceito é o **trilho**: o fluxo é uma sequência com uma bifurcação (A ou
 ## Como incluir um vídeo novo
 
 1. Salve o MP4 em `videos/` e um quadro de capa em `videos/posters/` (mesmo nome, `.jpg`). Os MP4 entram no git como binários; mantenha cada um abaixo de 50 MB.
-2. Em `index.html`, copie o bloco `<figure class="clipe">` de um clipe pronto (por exemplo, o do clipe 1C) para o ponto do passo e ajuste arquivo, capa, legenda e duração. O manual não mostra numeração de clipes nem espaços reservados: o que ainda falta gravar fica no plano do projeto (`../Plano.md`).
+2. Em `index.html`, copie o bloco `<figure class="clipe">` de um clipe pronto (por exemplo, o do clipe 1C) para o ponto do passo e ajuste arquivo, capa, legenda e duração. O manual não mostra numeração de clipes nem espaços reservados: só entram clipes prontos.
 
 ## Como atualizar uma seção
 
